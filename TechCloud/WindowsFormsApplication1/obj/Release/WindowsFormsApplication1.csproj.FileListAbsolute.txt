@@ -1,0 +1,8 @@
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.exe
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\WindowsFormsApplication1.pdb
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\ResolveAssemblyReference.cache
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Form1.resources
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.Properties.Resources.resources
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.exe
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Release\WindowsFormsApplication1.pdb

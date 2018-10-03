@@ -1,0 +1,60 @@
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Fortec\AppData\Local\Temporary Projects\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Fortec\Desktop\firebird c#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+E:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+F:\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\baruffi\Desktop\backup pendrive 15-06\PROGS PROF\C#\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Fontes\C#\Conection\CONECTANDO FIREBIRD COM C#\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.frmPrincipal.resources
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.CoreCompileInputs.cache
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb

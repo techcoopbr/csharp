@@ -1,0 +1,111 @@
+﻿using System;
+
+namespace Modelo
+{
+
+    public class Nfproduto
+    {
+        //dados básicos
+        public int IdDocument { get; set; }
+        public int Id { get; set; }
+        public int IdProduct { get; set; }
+        public int Codigo { get; set; }
+        public int Idnf { get; set; }
+        public int Codigoproduto { get; set; }
+        public string Cfop { get; set; }
+        public decimal Quantidade { get; set; }
+        public decimal Valorunitario { get; set; }
+        public decimal Valortotal { get; set; }
+        public decimal Descontos { get; set; }
+        public string Csticms { get; set; }
+        public string Cstpis { get; set; }
+        public string Cstcofins { get; set; }
+        public string Cstipi { get; set; }
+        public decimal Baseicms { get; set; }
+        public decimal Baseicmsst { get; set; }
+        public decimal Basepis { get; set; }
+        public decimal Basecofins { get; set; }
+        public decimal Baseipi { get; set; }
+        public decimal Aliquotaicms { get; set; }
+        public decimal Aliquotaicmsst { get; set; }
+        public decimal Aliquotapis { get; set; }
+        public decimal Aliquotacofins { get; set; }
+        public decimal Aliquotaipi { get; set; }
+        public decimal Valoricms { get; set; }
+        public decimal Valoricmsst { get; set; }
+        public decimal Valorpis { get; set; }
+        public decimal Valorcofins { get; set; }
+        public decimal Valoripi { get; set; }
+        public decimal Valorcusto { get; set; }
+        public string Descricao { get; set; }
+        public int Tipobcicms { get; set; }
+        public int Tipobcicmsst { get; set; }
+        public decimal Coringaicms { get; set; }
+        public decimal Coringaicmsst { get; set; }
+        public decimal Reducaoicms { get; set; }
+        public decimal Desconto_rateio { get; set; }
+        public decimal Seguro { get; set; }
+        public decimal Outros { get; set; }
+        public decimal Frete { get; set; }
+        public string Obs { get; set; }
+        public decimal Baseimportacao { get; set; }
+        public decimal Valoraduaneiro { get; set; }
+        public decimal Valorimpostoimportacao { get; set; }
+        public decimal Valoriof { get; set; }
+        public int Atualizaestoque { get; set; }
+        public string Tiponf { get; set; }
+        public int Cancelada { get; set; }
+        public int Empresa { get; set; }
+        public decimal Comissao { get; set; }
+        public decimal Peso { get; set; }
+        public decimal Impostoaprox { get; set; }
+        public string Unidade { get; set; }
+        public int Idtanque { get; set; }
+        public decimal Comb_encerrantef { get; set; }
+        public decimal Valorcustomedio { get; set; }
+        public int Idbico { get; set; }
+        public decimal Comb_encerrantei { get; set; }
+        public int Idordem { get; set; }
+        public string Ncm { get; set; }
+        public decimal Impestimado_nac { get; set; }
+        public decimal Impestimado_imp { get; set; }
+        public decimal Impestimado_est { get; set; }
+        public decimal Impestimado_mun { get; set; }
+        public int Entregador { get; set; }
+        public int Requisitante { get; set; }
+        public string Md5 { get; set; }
+        public string Chaveexporta { get; set; }
+        public string Obsitem { get; set; }
+        public int Canceladoitem { get; set; }
+        public decimal Piscofinssomado { get; set; }
+        public string Cod_produto { get; set; }
+        public DateTime Datainclusao { get; set; }
+        public string Nre { get; set; }
+        public string Cest { get; set; }
+        public string Origem_cst { get; set; }
+        public int Iditemcomanda { get; set; }
+        public decimal Baseiss { get; set; }
+        public decimal Valoriss { get; set; }
+        public decimal Aliquotaiss { get; set; }
+        public decimal Estoqueanterior { get; set; }
+        public decimal Estoqueanteriornf { get; set; }
+        public decimal Saldoanterior { get; set; }
+        public decimal Saldoposterior { get; set; }
+        public int Idnforigem { get; set; }
+        public int Idnfprodutoorigem { get; set; }
+        public string Unidadetributada { get; set; }
+        public decimal Quantidadetributavel { get; set; }
+        public decimal Valorunitariotributavel { get; set; }
+        public decimal Aliquotaufdestino { get; set; }
+        public decimal Aliquotafundoprobreza { get; set; }
+        public decimal Baseufdestino { get; set; }
+        public decimal Basefundopobreza { get; set; }
+        public string Enquadramentoipi { get; set; }
+        public int Bloq_estoque { get; set; }
+        public int Bloq_desconto { get; set; }
+        public int Bloq_validade { get; set; }
+        public decimal Valorliquido { get; set; }
+        public int Idnfprodutosweb { get; set; }
+        public int Sincronizado { get; set; }
+    }
+}

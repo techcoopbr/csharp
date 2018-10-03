@@ -1,0 +1,37 @@
+DEVE_SE INSTALAR: "Data Provider for .NET Framework 2.0"
+
+
+AO SE CRIAR O NOVO PROJETO CLIQUE NA GUIA "PROJECT" E DEPOIS EM "ADD REFERENCE"
+CLIQUE NA ABA "BROWSE"
+vA ATE A PASTA "C:\WINDOWS\MICROSOFT NET\FRAMEWORK\" E ESCOLHA O ARQUIVO "FIREBIRDSQL.DATA.CLIENT.DLL"
+
+
+
+aDICIONE A SEGUINTE REFERENCIA AO C# NAS PRIMEIRAS LINHAS DO CODIGO. 
+"using FirebirdSql.Data.FirebirdClient;"
+
+
+
+INSIRA ESTA VARIAVEL GLOBAL NO INICIO O SOFTWARE
+"private string strConn = @"DataSource=localhost; Database=C:\arq.fdb; username= SYSDBA; password = masterkey";"
+
+
+
+sEGUE ABAIXO O CODIGO COMENTADO DE UM BOTAO QUE CONECTE E FAZ UMA PESQUISA:
+ 	    
+	    bConnection conn = new FbConnection(strConn); //conecta utilizando a string 
+            FbCommand cmd = new FbCommand( "SELECT * FROM teste" , conn); //executa o SQL
+            FbDataAdapter DA = new FbDataAdapter(cmd); //cria uma variavel para coletar o resultado
+            DataSet DS = new DataSet(); //cria uma variavel DATASET para distribuir o resultado
+            conn.Open(); // abre conexao
+            
+            //jogar os resultados no grid.
+
+            DA.Fill(DS, "teste"); //Diz para o DATASET qual a tabela 
+            dataGridView1.DataSource = DS; // Linca o GRID com o DATASET
+            dataGridView1.DataMember = "teste"; //especifica nome da base para grid
+            conn.Close();//fecha conexao
+
+
+
+O SOFTWARE ESTA COM O DODIGO TODO COMENTADO... UTILIZE-O E TESTE-O.

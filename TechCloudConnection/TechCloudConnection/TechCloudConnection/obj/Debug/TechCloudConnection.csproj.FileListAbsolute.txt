@@ -1,0 +1,11 @@
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csprojResolveAssemblyReference.cache
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.frmPrincipal.resources
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.Properties.Resources.resources
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.GenerateResource.Cache
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CoreCompileInputs.cache
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe.config
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.pdb
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
+D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb

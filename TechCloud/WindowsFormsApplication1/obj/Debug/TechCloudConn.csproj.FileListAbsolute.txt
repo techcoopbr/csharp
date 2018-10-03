@@ -1,0 +1,7 @@
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\TechCloudConn.csprojResolveAssemblyReference.cache
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\TechCloud.frmPrincipal.resources
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\TechCloudConn.csproj.GenerateResource.Cache
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\TechCloudConn.csproj.CoreCompileInputs.cache
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+D:\Fontes\C#\TechCloud\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
