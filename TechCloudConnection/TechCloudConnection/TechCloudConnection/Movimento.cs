@@ -29,5 +29,6 @@ namespace Modelo
         public int Ccf { get; set; }
         public string Md5 { get; set; }
         public int Manual { get; set; }
+        public int Idweb { get; set; }
     }
 }
