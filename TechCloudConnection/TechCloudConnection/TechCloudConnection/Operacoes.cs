@@ -27,5 +27,6 @@ namespace Modelo
         public int Pagacomissao { get; set; }
         public int Operacaodav { get; set; }
         public int Es_naturezarubrica { get; set; }
+        public int Idweb { get; set; }
     }
 }

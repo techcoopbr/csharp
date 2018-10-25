@@ -11,33 +11,33 @@ using System.Web.Script.Serialization;
 
 namespace Modelo
 {
-    class MovimentoDAL
+    class OperacoesDAL
     {
-        public void Gravar(Movimento movimento)
+        public void Gravar(Operacoes operacoes)
         {
-            if (movimento.Codigo == 0)
-                Inserir(movimento);
+            if (operacoes.Codigo == 0)
+                Inserir(operacoes);
             else
-                Atualizar(movimento);
+                Atualizar(operacoes);
         }
 
-        private void Inserir(Movimento movimento)
+        private void Inserir(Operacoes operacoes)
         {
 
         }
 
-        private void Atualizar(Movimento movimento)
+        private void Atualizar(Operacoes operacoes)
         {
 
         }
 
-        public void Remover(Movimento movimento)
+        public void Remover(Operacoes operacoes)
         {
 
         }
 
 
-        public void PostMovimento()
+        public void PostOperacoes()
         {
             Connection_Query conn = new Connection_Query();
             conn.OpenConection();
@@ -48,7 +48,7 @@ namespace Modelo
 
             FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
 
-            Movimento m = new Movimento();
+            Operacoes o = new Operacoes();
 
             if (dr.HasRows)
             {
@@ -118,7 +118,7 @@ namespace Modelo
                             var serializerD = new JavaScriptSerializer();
                             dynamic usrD = serializerD.DeserializeObject(responseTexttD);
                             //p.Idfolk = usrD["id"];
-                            // >>>>>>  não existe o campo idfolk na tabela movimentos  <<<<<<
+                            // >>>>>>  não existe o campo idfolk na tabela operacoes  <<<<<<
                         }
                     }
                     catch (Exception e)
@@ -165,7 +165,7 @@ namespace Modelo
                             {
                                 if (DocumentId != 0)
                                 {
-                                    m.Codigo = DocumentId;
+                                    o.Codigo = DocumentId;
                                     NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO DOCUMENTOS...");
                                 }
                                 else
@@ -173,68 +173,66 @@ namespace Modelo
                                     NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO DOCUMENTOS...");
                                 }
 
-                                m.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
-                                if (dr["codigo"] != DBNull.Value) { m.Codigo = (int)dr["codigo"]; }
-                                if (dr["operacao"] != DBNull.Value) { m.Operacao = (int)dr["codigo"]; }
-                                if (dr["origem"] != DBNull.Value) { m.Origem = (string)dr["origem"]; }
-                                if (dr["codigo_ref"] != DBNull.Value) { m.Codigo_ref = (int)dr["codigo_ref"]; }
-                                if (dr["descricao"] != DBNull.Value) { m.Descricao = (string)dr["descricao"]; }
-                                if (dr["datalancamento"] != DBNull.Value) { m.Datalancamento = (DateTime)dr["datalancamento"]; }
-                                if (dr["valor"] != DBNull.Value) { m.Valor = (decimal)dr["valor"]; }
-                                if (dr["tipomovimento"] != DBNull.Value) { m.Tipomovimento = (int)dr["tipomovimento"]; }
-                                if (dr["banco"] != DBNull.Value) { m.Banco = (int)dr["Banco"]; }
-                                if (dr["empresa"] != DBNull.Value) { m.Empresa = (int)dr["empresa"]; }
-                                if (dr["viagem"] != DBNull.Value) { m.Viagem = (int)dr["viagem"]; }
-                                if (dr["idcaixa"] != DBNull.Value) { m.Idcaixa = (int)dr["idcaixa"]; }
-                                if (dr["datafatura"] != DBNull.Value) { m.Datafatura = (DateTime)dr["datafatura"]; }
-                                if (dr["faturado"] != DBNull.Value) { m.Faturado = (int)dr["faturado"]; }
-                                if (dr["idpessoacc"] != DBNull.Value) { m.Idpessoacc = (int)dr["idpessoacc"]; }
-                                if (dr["iduserbaixa"] != DBNull.Value) { m.Iduserbaixa = (int)dr["iduserbaixa"]; }
-                                if (dr["idecf"] != DBNull.Value) { m.Idecf = (int)dr["idecf"]; }
-                                if (dr["coo"] != DBNull.Value) { m.Coo = (int)dr["coo"]; }
-                                if (dr["dataecf"] != DBNull.Value) { m.Dataecf = (DateTime)dr["dataecf"]; }
-                                if (dr["horaecf"] != DBNull.Value) { m.Horaecf = (DateTime)dr["horaecf"]; }
-                                if (dr["crz"] != DBNull.Value) { m.Crz = (int)dr["crz"]; }
-                                if (dr["ccf"] != DBNull.Value) { m.Ccf = (int)dr["ccf"]; }
-                                if (dr["md5"] != DBNull.Value) { m.Md5 = (string)dr["md5"]; }
-                                if (dr["manual"] != DBNull.Value) { m.Manual = (int)dr["manual"]; }
-                                if (dr["account_id"] != DBNull.Value) { m.Idweb = (int)dr["account_id"]; }
-                                
-                                
-                                //pdal.PostNf(p);
+                                o.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
 
-                                string json = "{ ";
+                                if (dr["codigo"] != DBNull.Value) { o.Codigo = (int)dr["codigo"]; }
+                                if (dr["operacao"] != DBNull.Value) { o.Operacao = (int)dr["operacao"]; }
+                                if (dr["tipo"] != DBNull.Value) { o.Tipo = (int)dr["tipo"]; }
+                                if (dr["descricao"] != DBNull.Value) { o.Descricao = (string)dr["descricao"]; }
+                                if (dr["ativo"] != DBNull.Value) { o.Ativo = (bool)dr["ativo"]; }
+                                if (dr["estoque"] != DBNull.Value) { o.Estoque = (int)dr["estoque"]; }
+                                if (dr["descontomaximo"] != DBNull.Value) { o.Descontomaximo = (decimal)dr["descontomaximo"]; }
+                                if (dr["acrescimomaximo"] != DBNull.Value) { o.Acrescimomaximo = (decimal)dr["acrescimomaximo"]; }
+                                if (dr["descontoautomatico"] != DBNull.Value) { o.Descontoautomatico = (decimal)dr["descontoautomatico"]; }
+                                if (dr["acrescimoautomatico"] != DBNull.Value) { o.Acrescimoautomatico = (decimal)dr["acrescimoautomatico"]; }
+                                if (dr["multiplas"] != DBNull.Value) { o.Multiplas = (int)dr["multiplas"]; }
+                                if (dr["idoperadora"] != DBNull.Value) { o.Idoperadora = (int)dr["idoperadora"]; }
+                                if (dr["percentual"] != DBNull.Value) { o.Percentual = (decimal)dr["percentual"]; }
+                                if (dr["realizatef"] != DBNull.Value) { o.Realizatef = (int)dr["realizatef"]; }
+                                if (dr["gerenciador"] != DBNull.Value) { o.Gerenciador = (int)dr["gerenciador"]; }
+                                if (dr["taxajuro"] != DBNull.Value) { o.Taxajuro = (decimal)dr["taxajuro"]; }
+                                if (dr["formapgtoecf"] != DBNull.Value) { o.Formapgtoecf = (string)dr["formapgtoecf"]; }
+                                if (dr["md5"] != DBNull.Value) { o.Md5 = (string)dr["md5"]; }
+                                if (dr["operacaocte"] != DBNull.Value) { o.Operacaocte = (int)dr["operacaocte"]; }
+                                if (dr["diasposvenda"] != DBNull.Value) { o.Diasaposvenda = (int)dr["diasposvenda"]; }
+                                if (dr["pagacocmissao"] != DBNull.Value) { o.Pagacomissao = (int)dr["pagacomissao"]; }
+                                if (dr["operacaodav"] != DBNull.Value) { o.Operacaodav = (int)dr["operacaodav"]; }
+                                if (dr["es_naturezarubrica"] != DBNull.Value) { o.Es_naturezarubrica = (int)dr["es_naturezarubrica"]; }
+                                if (dr["account_id"] != DBNull.Value) { o.Idweb = (int)dr["account_id"]; }
+
+        //pdal.PostNf(p);
+
+        string json = "{ ";
                                 if (DocumentId != 0)
                                 {
                                     json = json + "\"id\" :\"" + DocumentId + "\", ";
                                 }
-                                json = json + "\"codigo\":\"" + m.Codigo + "\"," +
-                                     "\"codigo\":\"" + m.Codigo + "\"," +
+                                json = json + "\"codigo\":\"" + o.Codigo + "\"," +
+                                     "\"codigo\":\"" + o.Codigo + "\"," +
 
-                                     "\"operacao\":\"" + m.Operacao + "\"," +
-                                     "\"origem\":\"" + m.Origem + "\"," +
-                                     "\"codigo_ref\":\"" + m.Codigo_ref + "\"," +
-                                     "\"descricao\":\"" + m.Descricao + "\"," +
-                                     "\"datalancamento\":\"" + m.Datalancamento + "\"," +
-                                     "\"valor\":\"" + m.Valor + "\"," +
-                                     "\"tipomovimento\":\"" + m.Tipomovimento + "\"," +
-                                     "\"banco\":\"" + m.Banco + "\"," +
-                                     "\"empresa\":\"" + m.Empresa + "\"," +
-                                     "\"viagem\":\"" + m.Viagem + "\"," +
-                                     "\"idcaixa\":\"" + m.Idcaixa + "\"," +
-                                     "\"datafatura\":\"" + m.Datafatura + "\"," +
-                                     "\"faturado\":\"" + m.Faturado + "\"," +
-                                     "\"idpessoacc\":\"" + m.Idpessoacc + "\"," +
-                                     "\"iduserbaixa\":\"" + m.Iduserbaixa + "\"," +
-                                     "\"idecf\":\"" + m.Idecf + "\"," +
-                                     "\"coo\":\"" + m.Coo + "\"," +
-                                     "\"dataecf\":\"" + m.Dataecf + "\"," +
-                                     "\"horaecf\":\"" + m.Horaecf + "\"," +
-                                     "\"crz\":\"" + m.Crz + "\"," +
-                                     "\"ccf\":\"" + m.Ccf + "\"," +
-                                     "\"md5\":\"" + m.Md5 + "\"," +
-                                     "\"manual\":\"" + m.Manual + "\"," +
-                                     "\"account_id\" :\"" + m.Idweb + "\"}";
+                                     "\"operacao\":\"" + o.Operacao + "\"," +
+                                     "\"tipo\":\"" + o.Tipo + "\"," +
+                                     "\"descricao\":\"" + o.Descricao + "\"," +
+                                     "\"ativo\":\"" + o.Ativo + "\"," +
+                                     "\"estoque\":\"" + o.Estoque + "\"," +
+                                     "\"descontomaximo\":\"" + o.Descontomaximo + "\"," +
+                                     "\"acrescimomaximo\":\"" + o.Acrescimomaximo + "\"," +
+                                     "\"descontoautomatico\":\"" + o.Descontoautomatico + "\"," +
+                                     "\"acrescimoautomatico\":\"" + o.Acrescimoautomatico + "\"," +
+                                     "\"multiplas\":\"" + o.Multiplas + "\"," +
+                                     "\"idoperadora\":\"" + o.Idoperadora + "\"," +
+                                     "\"percentual\":\"" + o.Percentual + "\"," +
+                                     "\"realizatef\":\"" + o.Realizatef + "\"," +
+                                     "\"gerenciador\":\"" + o.Gerenciador + "\"," +
+                                     "\"taxajuro\":\"" + o.Taxajuro + "\"," +
+                                     "\"formapgtoecf\":\"" + o.Formapgtoecf + "\"," +
+                                     "\"md5\":\"" + o.Md5 + "\"," +
+                                     "\"operacaocte\":\"" + o.Operacaocte + "\"," +
+                                     "\"diasposvenda\":\"" + o.Diasaposvenda + "\"," +
+                                     "\"pagacomissao\":\"" + o.Pagacomissao + "\"," +
+                                     "\"operacaodav\":\"" + o.Operacaodav + "\"," +
+                                     "\"es_naturezarubrica\":\"" + o.Es_naturezarubrica + "\"," +
+                                     "\"account_id\" :\"" + o.Idweb + "\"}";
 
                                 json = json.Replace("\r\n", "");
 
@@ -287,10 +285,10 @@ namespace Modelo
 
                                 try
                                 {
-                                    MovimentoDAL movdal = new MovimentoDAL();
+                                    OperacoesDAL opedal = new OperacoesDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(m.Codigo));
+                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(o.Codigo));
                                 }
                                 catch
                                 {
@@ -317,11 +315,11 @@ namespace Modelo
             NewIniFile.IniWriteString("STATUS", "MSG", "ATUALIZAÇÃO FINALIZADA");
         }
 
-        public Movimento ObterPorId(long id)
+        public Operacoes ObterPorId(long id)
         {
-            var mov = new Movimento();
+            var op = new Operacoes();
 
-            return mov;
+            return op;
         }
     }
 }
