@@ -57,11 +57,13 @@
     <Compile Include="Item.cs" />
     <Compile Include="ItemDAL.cs" />
     <Compile Include="Movimento.cs" />
+    <Compile Include="MovimentoDAL.cs" />
     <Compile Include="Nf.cs" />
     <Compile Include="NfDAL.cs" />
     <Compile Include="Nfproduto.cs" />
     <Compile Include="NfprodutoDAL.cs" />
     <Compile Include="Operacoes.cs" />
+    <Compile Include="OperacoesDAL.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="PessoaDAL.cs" />
     <Compile Include="Principal.cs">
