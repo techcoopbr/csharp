@@ -52,6 +52,12 @@
   <ItemGroup>
     <Compile Include="Configs\IniFile.cs" />
     <Compile Include="Configs\ConexaoDB.cs" />
+    <Compile Include="CteCce.cs" />
+    <Compile Include="CteComposicao.cs" />
+    <Compile Include="CteCte.cs" />
+    <Compile Include="CteCteCaminhao.cs" />
+    <Compile Include="CteCteDestend.cs" />
+    <Compile Include="CteCteDocrem.cs" />
     <Compile Include="Duplicata.cs" />
     <Compile Include="DuplicataDAL.cs" />
     <Compile Include="Item.cs" />
