@@ -9,7 +9,7 @@ namespace Modelo
     class CteCce
     {
         public int Id { get; set; }
-        public int codigo { get; set; }
+        public int Codigo { get; set; }
         public int Idcte { get; set; }
         public string Arquivo { get; set; }
         public int Status { get; set; }
