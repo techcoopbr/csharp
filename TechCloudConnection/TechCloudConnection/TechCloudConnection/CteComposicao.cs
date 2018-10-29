@@ -9,6 +9,7 @@ namespace Modelo
     class CteComposicao
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idmotorista { get; set; }
         public int Idveiculo1 { get; set; }
         public int Idveiculo2 { get; set; }

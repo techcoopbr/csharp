@@ -53,6 +53,7 @@
     <Compile Include="Configs\IniFile.cs" />
     <Compile Include="Configs\ConexaoDB.cs" />
     <Compile Include="CteCce.cs" />
+    <Compile Include="CteCceDAL.cs" />
     <Compile Include="CteComposicao.cs" />
     <Compile Include="CteCte.cs" />
     <Compile Include="CteCteCaminhao.cs" />
