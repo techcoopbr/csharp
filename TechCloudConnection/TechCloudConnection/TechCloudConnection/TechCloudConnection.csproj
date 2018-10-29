@@ -55,8 +55,10 @@
     <Compile Include="CteCce.cs" />
     <Compile Include="CteCceDAL.cs" />
     <Compile Include="CteComposicao.cs" />
+    <Compile Include="CteComposicaoDAL.cs" />
     <Compile Include="CteCte.cs" />
     <Compile Include="CteCteCaminhao.cs" />
+    <Compile Include="CteCteDAL.cs" />
     <Compile Include="CteCteDestend.cs" />
     <Compile Include="CteCteDocrem.cs" />
     <Compile Include="CteCteFatura.cs" />
