@@ -75,6 +75,7 @@
     <Compile Include="CteCteObscontrib.cs" />
     <Compile Include="CteCteObscontribDAL.cs" />
     <Compile Include="CteCteObsfisco.cs" />
+    <Compile Include="CteCteObsfiscoDAL.cs" />
     <Compile Include="CteCtePrestacao.cs" />
     <Compile Include="CteCteProdqnt.cs" />
     <Compile Include="CteCteSeguro.cs" />
