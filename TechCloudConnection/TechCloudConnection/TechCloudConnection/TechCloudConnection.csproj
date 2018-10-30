@@ -71,6 +71,7 @@
     <Compile Include="CteCteLacres.cs" />
     <Compile Include="CteCteLacresDAL.cs" />
     <Compile Include="CteCteMotorista.cs" />
+    <Compile Include="CteCteMotoristaDAL.cs" />
     <Compile Include="CteCteObscontrib.cs" />
     <Compile Include="CteCteObsfisco.cs" />
     <Compile Include="CteCtePrestacao.cs" />
