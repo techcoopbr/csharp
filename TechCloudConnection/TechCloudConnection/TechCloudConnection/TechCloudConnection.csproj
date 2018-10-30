@@ -65,6 +65,7 @@
     <Compile Include="CteCteDocrem.cs" />
     <Compile Include="CteCteDocremDAL.cs" />
     <Compile Include="CteCteFatura.cs" />
+    <Compile Include="CteCteFaturaDAL.cs" />
     <Compile Include="CteCteInstrucao.cs" />
     <Compile Include="CteCteLacres.cs" />
     <Compile Include="CteCteMotorista.cs" />
