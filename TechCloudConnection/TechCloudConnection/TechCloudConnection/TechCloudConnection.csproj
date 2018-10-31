@@ -79,7 +79,7 @@
     <Compile Include="CteCtePrestacao.cs" />
     <Compile Include="CteCtePrestacaoDAL.cs" />
     <Compile Include="CteCteProdqnt.cs" />
-    <Compile Include="CteCteProdqntDAV.cs" />
+    <Compile Include="CteCteProdqntDAL.cs" />
     <Compile Include="CteCteSeguro.cs" />
     <Compile Include="CteVeiculos.cs" />
     <Compile Include="CteVeiculosCusto.cs" />
