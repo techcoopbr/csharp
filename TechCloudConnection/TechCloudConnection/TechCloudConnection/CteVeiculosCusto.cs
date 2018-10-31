@@ -9,6 +9,7 @@ namespace Modelo
     class CteVeiculosCusto
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idveiculo { get; set; }
         public int Idproduto { get; set; }
         public string Descricao { get; set; }
