@@ -87,6 +87,7 @@
     <Compile Include="CteVeiculosCustoDAL.cs" />
     <Compile Include="CteVeiculosDAL.cs" />
     <Compile Include="CteVeiculosItens.cs" />
+    <Compile Include="CteVeiculosItensDAL.cs" />
     <Compile Include="CteViagem.cs" />
     <Compile Include="Duplicata.cs" />
     <Compile Include="DuplicataDAL.cs" />
