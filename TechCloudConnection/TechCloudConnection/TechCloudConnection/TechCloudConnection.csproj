@@ -81,6 +81,7 @@
     <Compile Include="CteCteProdqnt.cs" />
     <Compile Include="CteCteProdqntDAL.cs" />
     <Compile Include="CteCteSeguro.cs" />
+    <Compile Include="CteCteSeguroDAL.cs" />
     <Compile Include="CteVeiculos.cs" />
     <Compile Include="CteVeiculosCusto.cs" />
     <Compile Include="CteVeiculosItens.cs" />
