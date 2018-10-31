@@ -20,3 +20,10 @@ C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechClo
 C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CopyComplete
 C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
 C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csprojAssemblyReference.cache
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.frmPrincipal.resources
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.Properties.Resources.resources
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.GenerateResource.cache
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CoreCompileInputs.cache
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb
