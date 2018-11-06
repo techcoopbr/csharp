@@ -207,7 +207,7 @@ namespace Modelo
                                 json = json + "\"codigo\":\"" + p.Codigo + "\"," +
                                      "\"codigo\":\"" + p.Codigo + "\"," +
 
-                                     "\"relatorio\":\"" + p.Relatorio + "\"," +
+                                     "\"descricao\":\"" + p.Descricao+ "\"," +
                                      "\"parcelas\":\"" + p.Parcelas + "\"," +
                                      "\"intervalo\":\"" + p.Intervalo + "\"," +
                                      "\"tipocobranca\":\"" + p.Tipocobranca + "\"," +
