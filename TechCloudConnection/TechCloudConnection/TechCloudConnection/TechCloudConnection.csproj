@@ -98,6 +98,7 @@
     <Compile Include="MdfeCarregamento.cs" />
     <Compile Include="MdfeCarregamentoDAL.cs" />
     <Compile Include="MdfeChavecte.cs" />
+    <Compile Include="MdfeChavecteDAL.cs" />
     <Compile Include="MdfeChavenfe.cs" />
     <Compile Include="MdfeCiot.cs" />
     <Compile Include="MdfeCondutor.cs" />
