@@ -9,6 +9,7 @@ namespace Modelo
     class MdfeSeguro
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idmdfe { get; set; }
         public int Responsavel { get; set; }
         public string Cpfcnpj { get; set; }
