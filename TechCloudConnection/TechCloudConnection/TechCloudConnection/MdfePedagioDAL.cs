@@ -193,8 +193,7 @@ namespace Modelo
                                 }
                                 json = json + "\"codigo\":\"" + p.Codigo + "\"," +
                                      "\"codigo\":\"" + p.Codigo + "\"," +
-
-                                     "\"codigo\":\"" + p.Codigo + "\"," +
+                                     
                                      "\"idmdfe\":\"" + p.Idmdfe + "\"," +
                                      "\"cnpjpedagio\":\"" + p.Cnpjpedagio + "\"," +
                                      "\"numerocomprovante\":\"" + p.Numerocomprovante + "\"," +
