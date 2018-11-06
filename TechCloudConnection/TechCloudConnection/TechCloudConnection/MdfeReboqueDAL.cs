@@ -275,7 +275,7 @@ namespace Modelo
 
                                 try
                                 {
-                                    MdfeReboqueDAL perdal = new MdfeReboqueDAL();
+                                    MdfeReboqueDAL rebdal = new MdfeReboqueDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
                                     conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(r.Codigo));
@@ -307,9 +307,9 @@ namespace Modelo
 
         public MdfeReboque ObterPorId(long id)
         {
-            var per = new MdfeReboque();
+            var reb = new MdfeReboque();
 
-            return per;
+            return reb;
         }
     }
 }
