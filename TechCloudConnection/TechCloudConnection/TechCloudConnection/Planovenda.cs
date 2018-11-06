@@ -9,6 +9,7 @@ namespace Modelo
     class Planovenda
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public string Descricao { get; set; }
         public int Parcelas { get; set; }
         public string Intervalo { get; set; }

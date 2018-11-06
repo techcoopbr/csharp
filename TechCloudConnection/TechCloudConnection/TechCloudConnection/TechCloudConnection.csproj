@@ -135,6 +135,7 @@
     <Compile Include="Pessoa.cs" />
     <Compile Include="PessoaDAL.cs" />
     <Compile Include="Planovenda.cs" />
+    <Compile Include="PlanovendaDAL.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>
