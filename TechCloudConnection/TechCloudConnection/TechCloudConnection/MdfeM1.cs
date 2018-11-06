@@ -9,6 +9,7 @@ namespace Modelo
     class MdfeM1
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idmdfe { get; set; }
         public string Cnpjemitente { get; set; }
         public string Ufdestinatario { get; set; }

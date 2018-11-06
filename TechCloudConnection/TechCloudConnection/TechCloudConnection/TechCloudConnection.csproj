@@ -113,6 +113,7 @@
     <Compile Include="MdfeLacres.cs" />
     <Compile Include="MdfeLacresDAL.cs" />
     <Compile Include="MdfeM1.cs" />
+    <Compile Include="MdfeM1DAL.cs" />
     <Compile Include="MdfePedagio.cs" />
     <Compile Include="MdfePercurso.cs" />
     <Compile Include="MdfeReboque.cs" />
