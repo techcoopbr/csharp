@@ -9,6 +9,7 @@ namespace Modelo
     class MovimentoGerencial
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idmovimento { get; set; }
         public string Idplanog { get; set; }
         public int Idpessoas { get; set; }

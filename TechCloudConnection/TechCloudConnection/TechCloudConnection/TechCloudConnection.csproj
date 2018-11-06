@@ -125,6 +125,7 @@
     <Compile Include="Movimento.cs" />
     <Compile Include="MovimentoDAL.cs" />
     <Compile Include="MovimentoGerencial.cs" />
+    <Compile Include="MovimentoGerencialDAL.cs" />
     <Compile Include="Nf.cs" />
     <Compile Include="NfDAL.cs" />
     <Compile Include="Nfproduto.cs" />
