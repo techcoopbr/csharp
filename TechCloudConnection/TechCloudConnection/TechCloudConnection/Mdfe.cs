@@ -9,6 +9,7 @@ namespace Modelo
     class Mdfe
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public string Chave { get; set; }
         public int Serie { get; set; }
         public int Documento { get; set; }
