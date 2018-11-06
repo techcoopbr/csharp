@@ -37,7 +37,7 @@ namespace Modelo
         }
 
 
-        public void PostCteCce()
+        public void PostMdfeChavecte()
         {
             Connection_Query conn = new Connection_Query();
             conn.OpenConection();
