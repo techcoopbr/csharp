@@ -9,6 +9,7 @@ namespace Modelo
     class MdfeReboque
     {
         public int Idmdfe { get; set; }
+        public int Codigo { get; set; }
         public int Idveiculo { get; set; }
         public string Placa { get; set; }
         public int Tipocarroceria { get; set; }

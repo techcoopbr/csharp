@@ -119,6 +119,7 @@
     <Compile Include="MdfePercurso.cs" />
     <Compile Include="MdfePercursoDAL.cs" />
     <Compile Include="MdfeReboque.cs" />
+    <Compile Include="MdfeReboqueDAL.cs" />
     <Compile Include="MdfeSeguro.cs" />
     <Compile Include="Movimento.cs" />
     <Compile Include="MovimentoDAL.cs" />
