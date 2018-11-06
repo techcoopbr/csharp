@@ -241,8 +241,7 @@ namespace Modelo
                                 }
                                 json = json + "\"codigo\":\"" + m.Codigo + "\"," +
                                      "\"codigo\":\"" + m.Codigo + "\"," +
-
-                                     "\"codigo\":\"" + m.Codigo + "\"," +
+                                     
                                      "\"chave\":\"" + m.Chave + "\"," +
                                      "\"serie\":\"" + m.Serie + "\"," +
                                      "\"documento\":\"" + m.Documento + "\"," +

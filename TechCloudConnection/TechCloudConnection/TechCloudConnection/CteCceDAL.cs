@@ -178,8 +178,8 @@ namespace Modelo
                                 if (dr["codigo"] != DBNull.Value) { c.Codigo = (int)dr["codigo"]; }
                                 if (dr["idcte"] != DBNull.Value) { c.Idcte = (int)dr["idcte"]; }
                                 if (dr["arquivo"] != DBNull.Value) { c.Arquivo = (string)dr["arquivo"]; }
-                                if (dr["status"] != DBNull.Value) { c.Status = (int)dr[""]; }
-                                if (dr["sequencia"] != DBNull.Value) { c.Sequencia = (int)dr[""]; }
+                                if (dr["status"] != DBNull.Value) { c.Status = (int)dr["status"]; }
+                                if (dr["sequencia"] != DBNull.Value) { c.Sequencia = (int)dr["sequencia"]; }
                                 if (dr["texto"] != DBNull.Value) { c.Texto = (string)dr["texto"]; }
                                 if (dr["chaveevento"] != DBNull.Value) { c.Chaveevento = (string)dr["chaveevento"]; }
                                 if (dr["dataevento"] != DBNull.Value) { c.Dataevento = (DateTime)dr["dataevento"]; }
