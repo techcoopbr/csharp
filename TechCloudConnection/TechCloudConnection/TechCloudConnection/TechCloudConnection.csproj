@@ -115,6 +115,7 @@
     <Compile Include="MdfeM1.cs" />
     <Compile Include="MdfeM1DAL.cs" />
     <Compile Include="MdfePedagio.cs" />
+    <Compile Include="MdfePedagioDAL.cs" />
     <Compile Include="MdfePercurso.cs" />
     <Compile Include="MdfeReboque.cs" />
     <Compile Include="MdfeSeguro.cs" />

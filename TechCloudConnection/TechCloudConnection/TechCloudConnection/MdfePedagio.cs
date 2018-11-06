@@ -9,7 +9,8 @@ namespace Modelo
     class MdfePedagio
     {
         public int Id { get; set; }
-        public string Idmdfe { get; set; }
+        public int Codigo { get; set; }
+        public int Idmdfe { get; set; }
         public string Cnpjpedagio { get; set; }
         public string Numerocomprovante { get; set; }
         public string Cnpjpagante { get; set; }
