@@ -9,6 +9,7 @@ namespace Modelo
     class MdfeContratante
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idmdfe { get; set; }
         public string Cnpj { get; set; }
         public string Nome { get; set; }
