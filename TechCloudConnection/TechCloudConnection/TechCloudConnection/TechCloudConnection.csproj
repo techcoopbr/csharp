@@ -104,6 +104,7 @@
     <Compile Include="MdfeCiot.cs" />
     <Compile Include="MdfeCiotDAL.cs" />
     <Compile Include="MdfeCondutor.cs" />
+    <Compile Include="MdfeCondutorDAL.cs" />
     <Compile Include="MdfeContratante.cs" />
     <Compile Include="MdfeDAL.cs" />
     <Compile Include="MdfeDescarregamento.cs" />
