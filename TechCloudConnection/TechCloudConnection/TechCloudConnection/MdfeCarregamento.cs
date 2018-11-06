@@ -9,6 +9,7 @@ namespace Modelo
     class MdfeCarregamento
     {
         public int Id { get; set; }
+        public int Codigo { get; set; }
         public int Idmdfe { get; set; }
         public int Idcidade { get; set; }
         public string Uf { get; set; }

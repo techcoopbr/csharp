@@ -96,6 +96,7 @@
     <Compile Include="ItemDAL.cs" />
     <Compile Include="Mdfe.cs" />
     <Compile Include="MdfeCarregamento.cs" />
+    <Compile Include="MdfeCarregamentoDAL.cs" />
     <Compile Include="MdfeChavecte.cs" />
     <Compile Include="MdfeChavenfe.cs" />
     <Compile Include="MdfeCiot.cs" />
