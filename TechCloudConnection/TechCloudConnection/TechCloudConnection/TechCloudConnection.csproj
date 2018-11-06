@@ -111,6 +111,7 @@
     <Compile Include="MdfeDescarregamento.cs" />
     <Compile Include="MdfeDescarregamentoDAL.cs" />
     <Compile Include="MdfeLacres.cs" />
+    <Compile Include="MdfeLacresDAL.cs" />
     <Compile Include="MdfeM1.cs" />
     <Compile Include="MdfePedagio.cs" />
     <Compile Include="MdfePercurso.cs" />
