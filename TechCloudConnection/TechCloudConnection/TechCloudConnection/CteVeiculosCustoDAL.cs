@@ -46,7 +46,7 @@ namespace Modelo
 
             CteVeiculosCustoDAL cdal = new CteVeiculosCustoDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from CTE_VEICULOS_CUSTO p, empresa E where p.sincronizado = 0");
 
             CteVeiculosCusto c = new CteVeiculosCusto();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE CTE_VEICULOS_CUSTO P SET P.IDCTEVEICULOSCUSTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -250,7 +250,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE CTE_VEICULOS_CUSTO P SET P.IDCTEVEICULOSCUSTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -264,7 +264,7 @@ namespace Modelo
                                     CteVeiculosCustoDAL cusdal = new CteVeiculosCustoDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(c.Codigo));
+                                    conn.ExecuteQueries("UPDATE CTE_VEICULOS_CUSTO P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(c.Codigo));
                                 }
                                 catch
                                 {
