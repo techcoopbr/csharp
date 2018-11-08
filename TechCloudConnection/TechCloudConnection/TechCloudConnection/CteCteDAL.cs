@@ -46,7 +46,7 @@ namespace Modelo
 
             CteCteDAL ctedal = new CteCteDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from CTE_CTE p, empresa E where p.sincronizado = 0");
 
             CteCte c = new CteCte();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE CTE_CTE P SET P.IDCTECTEWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -175,46 +175,78 @@ namespace Modelo
 
                                 c.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
 
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-                                if (dr[""] != DBNull.Value) { c. = ()dr[""]; }
-
-
-
-
-                                if (dr["codigo"] != DBNull.Value) { o.Codigo = (int)dr["codigo"]; }
-                                if (dr["operacao"] != DBNull.Value) { o.Operacao = (int)dr["operacao"]; }
-                                if (dr["tipo"] != DBNull.Value) { o.Tipo = (int)dr["tipo"]; }
-                                if (dr["descricao"] != DBNull.Value) { o.Descricao = (string)dr["descricao"]; }
-                                if (dr["ativo"] != DBNull.Value) { o.Ativo = (bool)dr["ativo"]; }
-                                if (dr["estoque"] != DBNull.Value) { o.Estoque = (int)dr["estoque"]; }
-                                if (dr["descontomaximo"] != DBNull.Value) { o.Descontomaximo = (decimal)dr["descontomaximo"]; }
-                                if (dr["acrescimomaximo"] != DBNull.Value) { o.Acrescimomaximo = (decimal)dr["acrescimomaximo"]; }
-                                if (dr["descontoautomatico"] != DBNull.Value) { o.Descontoautomatico = (decimal)dr["descontoautomatico"]; }
-                                if (dr["acrescimoautomatico"] != DBNull.Value) { o.Acrescimoautomatico = (decimal)dr["acrescimoautomatico"]; }
-                                if (dr["multiplas"] != DBNull.Value) { o.Multiplas = (int)dr["multiplas"]; }
-                                if (dr["idoperadora"] != DBNull.Value) { o.Idoperadora = (int)dr["idoperadora"]; }
-                                if (dr["percentual"] != DBNull.Value) { o.Percentual = (decimal)dr["percentual"]; }
-                                if (dr["realizatef"] != DBNull.Value) { o.Realizatef = (int)dr["realizatef"]; }
-                                if (dr["gerenciador"] != DBNull.Value) { o.Gerenciador = (int)dr["gerenciador"]; }
-                                if (dr["taxajuro"] != DBNull.Value) { o.Taxajuro = (decimal)dr["taxajuro"]; }
-                                if (dr["formapgtoecf"] != DBNull.Value) { o.Formapgtoecf = (string)dr["formapgtoecf"]; }
-                                if (dr["md5"] != DBNull.Value) { o.Md5 = (string)dr["md5"]; }
-                                if (dr["operacaocte"] != DBNull.Value) { o.Operacaocte = (int)dr["operacaocte"]; }
-                                if (dr["diasposvenda"] != DBNull.Value) { o.Diasaposvenda = (int)dr["diasposvenda"]; }
-                                if (dr["pagacocmissao"] != DBNull.Value) { o.Pagacomissao = (int)dr["pagacomissao"]; }
-                                if (dr["operacaodav"] != DBNull.Value) { o.Operacaodav = (int)dr["operacaodav"]; }
-                                if (dr["es_naturezarubrica"] != DBNull.Value) { o.Es_naturezarubrica = (int)dr["es_naturezarubrica"]; }
-                                if (dr["account_id"] != DBNull.Value) { o.Idweb = (int)dr["account_id"]; }
+                                if (dr["codigo"] != DBNull.Value) { c.Codigo = (int)dr["codigo"]; }
+                                if (dr["modelo"] != DBNull.Value) { c.Modelo = (string)dr["modelo"]; }
+                                if (dr["serie"] != DBNull.Value) { c.Serie = (int)dr["serie"]; }
+                                if (dr["documento"] != DBNull.Value) { c.Documento = (int)dr["documento"]; }
+                                if (dr["dataemissao"] != DBNull.Value) { c.Dataemissao = (DateTime)dr["dataemissao"]; }
+                                if (dr["cfop"] != DBNull.Value) { c.Cfop = (string)dr["cfop"]; }
+                                if (dr["naturezaoperacao"] != DBNull.Value) { c.Naturezaoperacao = (string)dr["naturezaoperacao"]; }
+                                if (dr["chave"] != DBNull.Value) { c.Chave = (string)dr["chave"]; }
+                                if (dr["chaveref"] != DBNull.Value) { c.Chaveref = (string)dr["chaveref"]; }
+                                if (dr["tiposervico"] != DBNull.Value) { c.Tiposervico = (int)dr["tiposervico"]; }
+                                if (dr["finalidadeemissao"] != DBNull.Value) { c.Finalidadeemissao = (int)dr["finalidadeemissao"]; }
+                                if (dr["formapagamento"] != DBNull.Value) { c.Formapagamento = (int)dr["formapagamento"]; }
+                                if (dr["cidadeemissao"] != DBNull.Value) { c.Cidadeemissao = (int)dr["cidadeemissao"]; }
+                                if (dr["cidadeinicio"] != DBNull.Value) { c.Cidadeinicio = (int)dr["cidadeinicio"]; }
+                                if (dr["cidadefim"] != DBNull.Value) { c.Cidadefim = (int)dr["cidadefim"]; }
+                                if (dr["previsaoentrega"] != DBNull.Value) { c.Previsaoentrega = (DateTime)dr["previsaoentrega"]; }
+                                if (dr["tomador"] != DBNull.Value) { c.Tomador = (int)dr["tomador"]; }
+                                if (dr["idtomador"] != DBNull.Value) { c.Idtomador = (int)dr["idtomador"]; }
+                                if (dr["idremetente"] != DBNull.Value) { c.Idremetente = (int)dr["idremetente"]; }
+                                if (dr["iddestinatario"] != DBNull.Value) { c.Iddestinatario = (int)dr["iddestinatario"]; }
+                                if (dr["idexpedidor"] != DBNull.Value) { c.Idexpedidor = (int)dr["idexpedidor"]; }
+                                if (dr["idrecebedor"] != DBNull.Value) { c.Idrecebedor = (int)dr["idrecebedor"]; }
+                                if (dr["valorcarga"] != DBNull.Value) { c.Valorcarga = (decimal)dr["valorcarga"]; }
+                                if (dr["produtopredominante"] != DBNull.Value) { c.Produtopredominante = (string)dr["produtopredominante"]; }
+                                if (dr["outrascaracteristicas"] != DBNull.Value) { c.Outrascaracteristicas = (string)dr["outrascaracteristicas"]; }
+                                if (dr["valorfrete"] != DBNull.Value) { c.Valorfrete = (decimal)dr["valorfrete"]; }
+                                if (dr["valorreceber"] != DBNull.Value) { c.Valorreceber = (decimal)dr["valorreceber"]; }
+                                if (dr["impostosvariavel"] != DBNull.Value) { c.Impostosvariavel = (decimal)dr["impostosvariavel"]; }
+                                if (dr["cst_icms"] != DBNull.Value) { c.Cst_icms = (string)dr["cst_icms"]; }
+                                if (dr["base_icms"] != DBNull.Value) { c.Base_icms = (decimal)dr["base_icms"]; }
+                                if (dr["red_icms"] != DBNull.Value) { c.Red_icms = (decimal)dr["red_icms"]; }
+                                if (dr["aliquota_icms"] != DBNull.Value) { c.Aliquota_icms = (int)dr["aliquota_icms"]; }
+                                if (dr["valor_icms"] != DBNull.Value) { c.Valor_icms = (decimal)dr["valor_icms"]; }
+                                if (dr["credito_icms"] != DBNull.Value) { c.Credito_icms = (decimal)dr["credito_icms"]; }
+                                if (dr["informacoes_fisco"] != DBNull.Value) { c.Informacoes_fisco = (string)dr["informacoes_fisco"]; }
+                                if (dr["observacoesgerais"] != DBNull.Value) { c.Observacoesgerais = (string)dr["observacoesgerais"]; }
+                                if (dr["emissao"] != DBNull.Value) { c.Emissao = (int)dr["emissao"]; }
+                                if (dr["ambiente"] != DBNull.Value) { c.Ambiente = (int)dr["ambiente"]; }
+                                if (dr["status"] != DBNull.Value) { c.Status = (string)dr["status"]; }
+                                if (dr["recibo"] != DBNull.Value) { c.Recibo = (string)dr["recibo"]; }
+                                if (dr["protocolo"] != DBNull.Value) { c.Protocolo = (string)dr["protocolo"]; }
+                                if (dr["horarecibo"] != DBNull.Value) { c.Horarecibo = (string)dr["horarecibo"]; }
+                                if (dr["ciot"] != DBNull.Value) { c.Ciot = (string)dr["ciot"]; }
+                                if (dr["lotacao"] != DBNull.Value) { c.Lotacao = (int)dr["lotacao"]; }
+                                if (dr["rntrc"] != DBNull.Value) { c.Rntrc = (string)dr["rntrc"]; }
+                                if (dr["tipo_data"] != DBNull.Value) { c.Tipo_data = (int)dr["tipo_data"]; }
+                                if (dr["tipo_hora"] != DBNull.Value) { c.Tipo_hora = (int)dr["tipo_hora"]; }
+                                if (dr["tipo_datai"] != DBNull.Value) { c.Tipo_datai = (DateTime)dr["tipo_datai"]; }
+                                if (dr["tipo_dataf"] != DBNull.Value) { c.Tipo_dataf = (DateTime)dr["tipo_dataf"]; }
+                                if (dr["tipo_horai"] != DBNull.Value) { c.Tipo_horai = (DateTime)dr["tipo_horai"]; }
+                                if (dr["tipo_horaf"] != DBNull.Value) { c.Tipo_horaf = (DateTime)dr["tipo_horaf"]; }
+                                if (dr["idviagem"] != DBNull.Value) { c.Idviagem = (int)dr["idviagem"]; }
+                                if (dr["data_atualizacao"] != DBNull.Value) { c.Data_atualizacao = (DateTime)dr["data_atualizacao"]; }
+                                if (dr["pedagio"] != DBNull.Value) { c.Pedagio = (decimal)dr["pedagio"]; }
+                                if (dr["descarga"] != DBNull.Value) { c.Descarga = (decimal)dr["descarga"]; }
+                                if (dr["icmsreembolso"] != DBNull.Value) { c.Icmsreembolso = (decimal)dr["icmsreembolso"]; }
+                                if (dr["funcionario"] != DBNull.Value) { c.Funcionario = (int)dr["funcionario"]; }
+                                if (dr["empresa"] != DBNull.Value) { c.Empresa = (int)dr["empresa"]; }
+                                if (dr["acrescimo"] != DBNull.Value) { c.Acrescimo = (decimal)dr["acrescimo"]; }
+                                if (dr["idoperacao"] != DBNull.Value) { c.Idoperacao = (int)dr["idoperacao"]; }
+                                if (dr["kmincial"] != DBNull.Value) { c.Kmincial = (decimal)dr["kmincial"]; }
+                                if (dr["kmfinal"] != DBNull.Value) { c.Kmfinal = (decimal)dr["kmfinal"]; }
+                                if (dr["horaemissao"] != DBNull.Value) { c.Horaemissao = (DateTime)dr["horaemissao"]; }
+                                if (dr["idmodelo"] != DBNull.Value) { c.Idmodelo = (int)dr["idmodelo"]; }
+                                if (dr["retira"] != DBNull.Value) { c.Retira = (int)dr["retira"]; }
+                                if (dr["localretirada"] != DBNull.Value) { c.Localretirada = (string)dr["localretirada"]; }
+                                if (dr["caracadicional"] != DBNull.Value) { c.Caracadicional = (string)dr["caracadicional"]; }
+                                if (dr["caracservico"] != DBNull.Value) { c.Caracservico = (string)dr["caracservico"]; }
+                                if (dr["cidadecoleta"] != DBNull.Value) { c.Cidadecoleta = (string)dr["cidadecoleta"]; }
+                                if (dr["cidadeentrega"] != DBNull.Value) { c.Cidadeentrega = (string)dr["cidadeentrega"]; }
+                                if (dr["globalizado"] != DBNull.Value) { c.Globalizado = (int)dr["globalizado"]; }
+                                if (dr["idweb"] != DBNull.Value) { c.Idweb = (int)dr["idweb"]; }
 
                                 //pdal.PostNf(p);
 
@@ -223,32 +255,82 @@ namespace Modelo
                                 {
                                     json = json + "\"id\" :\"" + DocumentId + "\", ";
                                 }
-                                json = json + "\"codigo\":\"" + o.Codigo + "\"," +
-                                     "\"codigo\":\"" + o.Codigo + "\"," +
+                                json = json + "\"codigo\":\"" + c.Codigo + "\"," +
+                                     "\"codigo\":\"" + c.Codigo + "\"," +
 
-                                     "\"operacao\":\"" + o.Operacao + "\"," +
-                                     "\"tipo\":\"" + o.Tipo + "\"," +
-                                     "\"descricao\":\"" + o.Descricao + "\"," +
-                                     "\"ativo\":\"" + o.Ativo + "\"," +
-                                     "\"estoque\":\"" + o.Estoque + "\"," +
-                                     "\"descontomaximo\":\"" + o.Descontomaximo + "\"," +
-                                     "\"acrescimomaximo\":\"" + o.Acrescimomaximo + "\"," +
-                                     "\"descontoautomatico\":\"" + o.Descontoautomatico + "\"," +
-                                     "\"acrescimoautomatico\":\"" + o.Acrescimoautomatico + "\"," +
-                                     "\"multiplas\":\"" + o.Multiplas + "\"," +
-                                     "\"idoperadora\":\"" + o.Idoperadora + "\"," +
-                                     "\"percentual\":\"" + o.Percentual + "\"," +
-                                     "\"realizatef\":\"" + o.Realizatef + "\"," +
-                                     "\"gerenciador\":\"" + o.Gerenciador + "\"," +
-                                     "\"taxajuro\":\"" + o.Taxajuro + "\"," +
-                                     "\"formapgtoecf\":\"" + o.Formapgtoecf + "\"," +
-                                     "\"md5\":\"" + o.Md5 + "\"," +
-                                     "\"operacaocte\":\"" + o.Operacaocte + "\"," +
-                                     "\"diasposvenda\":\"" + o.Diasaposvenda + "\"," +
-                                     "\"pagacomissao\":\"" + o.Pagacomissao + "\"," +
-                                     "\"operacaodav\":\"" + o.Operacaodav + "\"," +
-                                     "\"es_naturezarubrica\":\"" + o.Es_naturezarubrica + "\"," +
-                                     "\"account_id\" :\"" + o.Idweb + "\"}";
+                                     "\"codigo\":\"" + c.Codigo + "\"," +
+                                     "\"modelo\":\"" + c.Modelo + "\"," +
+                                     "\"serie\":\"" + c.Serie + "\"," +
+                                     "\"documento\":\"" + c.Documento + "\"," +
+                                     "\"dataemissao\":\"" + c.Dataemissao + "\"," +
+                                     "\"cfop\":\"" + c.Cfop + "\"," +
+                                     "\"naturezaoperacao\":\"" + c.Naturezaoperacao + "\"," +
+                                     "\"chave\":\"" + c.Chave + "\"," +
+                                     "\"chaveref\":\"" + c.Chaveref + "\"," +
+                                     "\"tiposervico\":\"" + c.Tiposervico + "\"," +
+                                     "\"finalidadeemissao\":\"" + c.Finalidadeemissao + "\"," +
+                                     "\"formapagamento\":\"" + c.Formapagamento + "\"," +
+                                     "\"cidadeemissao\":\"" + c.Cidadeemissao + "\"," +
+                                     "\"cidadeinicio\":\"" + c.Cidadeinicio + "\"," +
+                                     "\"cidadefim\":\"" + c.Cidadefim + "\"," +
+                                     "\"previsaoentrega\":\"" + c.Previsaoentrega + "\"," +
+                                     "\"tomador\":\"" + c.Tomador + "\"," +
+                                     "\"idtomador\":\"" + c.Idtomador + "\"," +
+                                     "\"idremetente\":\"" + c.Idremetente + "\"," +
+                                     "\"iddestinatario\":\"" + c.Iddestinatario + "\"," +
+                                     "\"idexpedidor\":\"" + c.Idexpedidor + "\"," +
+                                     "\"idrecebedor\":\"" + c.Idrecebedor + "\"," +
+                                     "\"valorcarga\":\"" + c.Valorcarga + "\"," +
+                                     "\"produtopredominante\":\"" + c.Produtopredominante + "\"," +
+                                     "\"outrascaracteristicas\":\"" + c.Outrascaracteristicas + "\"," +
+                                     "\"valorfrete\":\"" + c.Valorfrete + "\"," +
+                                     "\"valorreceber\":\"" + c.Valorreceber + "\"," +
+                                     "\"impostosvariavel\":\"" + c.Impostosvariavel + "\"," +
+                                     "\"cst_icms\":\"" + c.Cst_icms + "\"," +
+                                     "\"base_icms\":\"" + c.Base_icms + "\"," +
+                                     "\"red_icms\":\"" + c.Red_icms + "\"," +
+                                     "\"aliquota_icms\":\"" + c.Aliquota_icms + "\"," +
+                                     "\"valor_icms\":\"" + c.Valor_icms + "\"," +
+                                     "\"credito_icms\":\"" + c.Credito_icms + "\"," +
+                                     "\"informacoes_fisco\":\"" + c.Informacoes_fisco + "\"," +
+                                     "\"observacoesgerais\":\"" + c.Observacoesgerais + "\"," +
+                                     "\"emissao\":\"" + c.Emissao + "\"," +
+                                     "\"ambiente\":\"" + c.Ambiente + "\"," +
+                                     "\"status\":\"" + c.Status + "\"," +
+                                     "\"recibo\":\"" + c.Recibo + "\"," +
+                                     "\"protocolo\":\"" + c.Protocolo + "\"," +
+                                     "\"horarecibo\":\"" + c.Horarecibo + "\"," +
+                                     "\"ciot\":\"" + c.Ciot + "\"," +
+                                     "\"lotacao\":\"" + c.Lotacao + "\"," +
+                                     "\"rntrc\":\"" + c.Rntrc + "\"," +
+                                     "\"tipo_data\":\"" + c.Tipo_data + "\"," +
+                                     "\"tipo_hora\":\"" + c.Tipo_hora + "\"," +
+                                     "\"tipo_datai\":\"" + c.Tipo_datai + "\"," +
+                                     "\"tipo_dataf\":\"" + c.Tipo_dataf + "\"," +
+                                     "\"tipo_horai\":\"" + c.Tipo_horai + "\"," +
+                                     "\"tipo_horaf\":\"" + c.Tipo_horaf + "\"," +
+                                     "\"idviagem\":\"" + c.Idviagem + "\"," +
+                                     "\"data_atualizacao\":\"" + c.Data_atualizacao + "\"," +
+                                     "\"pedagio\":\"" + c.Pedagio + "\"," +
+                                     "\"descarga\":\"" + c.Descarga + "\"," +
+                                     "\"icmsreembolso\":\"" + c.Icmsreembolso + "\"," +
+                                     "\"funcionario\":\"" + c.Funcionario + "\"," +
+                                     "\"empresa\":\"" + c.Empresa + "\"," +
+                                     "\"acrescimo\":\"" + c.Acrescimo + "\"," +
+                                     "\"idoperacao\":\"" + c.Idoperacao + "\"," +
+                                     "\"kmincial\":\"" + c.Kmincial + "\"," +
+                                     "\"kmfinal\":\"" + c.Kmfinal + "\"," +
+                                     "\"horaemissao\":\"" + c.Horaemissao + "\"," +
+                                     "\"idmodelo\":\"" + c.Idmodelo + "\"," +
+                                     "\"retira\":\"" + c.Retira + "\"," +
+                                     "\"localretirada\":\"" + c.Localretirada + "\"," +
+                                     "\"caracadicional\":\"" + c.Caracadicional + "\"," +
+                                     "\"caracservico\":\"" + c.Caracservico + "\"," +
+                                     "\"cidadecoleta\":\"" + c.Cidadecoleta + "\"," +
+                                     "\"cidadeentrega\":\"" + c.Cidadeentrega + "\"," +
+                                     "\"globalizado\":\"" + c.Globalizado + "\"," +
+                                     "\"account_id\":\"" + c.Idweb + "\"}";
+
 
                                 json = json.Replace("\r\n", "");
 
@@ -290,7 +372,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE CTE_CTE P SET P.IDCTECTEWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -304,7 +386,7 @@ namespace Modelo
                                     OperacoesDAL opedal = new OperacoesDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(o.Codigo));
+                                    conn.ExecuteQueries("UPDATE CTE_CTE P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(c.Codigo));
                                 }
                                 catch
                                 {
