@@ -46,7 +46,7 @@ namespace Modelo
 
             CteCteLacresDAL ldal = new CteCteLacresDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from CTE_CTE_LACRES p, empresa E where p.sincronizado = 0");
 
             CteCteLacres c = new CteCteLacres();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE CTE_CTE_LACRES P SET P.IDCTECTELACRESWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -238,7 +238,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE CTE_CTE_LACRES P SET P.IDCTECTELACRESWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -252,7 +252,7 @@ namespace Modelo
                                     CteCteLacresDAL lacdal = new CteCteLacresDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(c.Codigo));
+                                    conn.ExecuteQueries("UPDATE CTE_CTE_LACRES P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(c.Codigo));
                                 }
                                 catch
                                 {
