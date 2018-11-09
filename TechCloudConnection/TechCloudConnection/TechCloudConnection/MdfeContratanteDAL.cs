@@ -46,7 +46,7 @@ namespace Modelo
 
             MdfeContratanteDAL cdal = new MdfeContratanteDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MDFE_CONTRATANTE p, empresa E where p.sincronizado = 0");
 
             MdfeContratante c = new MdfeContratante();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MDFE_CONTRATANTE P SET P.IDMDFECONTRATANTEWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -238,7 +238,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MDFE_CONTRATANTE P SET P.IDMDFECONTRATANTEWEB = " + Convert.ToString(DocumentId) + " WHERE P.iD = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -252,7 +252,7 @@ namespace Modelo
                                     MdfeContratanteDAL condal = new MdfeContratanteDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(c.Codigo));
+                                    conn.ExecuteQueries("UPDATE MDFE_CONTRATANTE P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(c.Codigo));
                                 }
                                 catch
                                 {
