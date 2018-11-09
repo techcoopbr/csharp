@@ -46,7 +46,7 @@ namespace Modelo
 
             OperacoesDAL odal = new OperacoesDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from OPERACOES p, empresa E where p.sincronizado = 0");
 
             Operacoes o = new Operacoes();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE OPERACOES P SET P.IDOPERACOESWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -274,7 +274,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE OPERACOES P SET P.IDOPERACOESWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -288,7 +288,7 @@ namespace Modelo
                                     OperacoesDAL opedal = new OperacoesDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(o.Codigo));
+                                    conn.ExecuteQueries("UPDATE OPERACOES P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(o.Codigo));
                                 }
                                 catch
                                 {
