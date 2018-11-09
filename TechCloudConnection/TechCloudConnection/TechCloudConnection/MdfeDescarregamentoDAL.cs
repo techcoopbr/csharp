@@ -46,7 +46,7 @@ namespace Modelo
 
             MdfeDescarregamentoDAL ddal = new MdfeDescarregamentoDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MDFE_DESCARREGAMENTO p, empresa E where p.sincronizado = 0");
 
             MdfeDescarregamento d = new MdfeDescarregamento();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MDFE_DESCARREGAMENTO P SET P.IDMDFEDESCARREGAMENTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -242,7 +242,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MDFE_DESCARREGAMENTO P SET P.IDMDFEDESCARREGAMENTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -256,7 +256,7 @@ namespace Modelo
                                     MdfeDescarregamentoDAL desdal = new MdfeDescarregamentoDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(d.Codigo));
+                                    conn.ExecuteQueries("UPDATE MDFE_DESCARREGAMENTO P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(d.Codigo));
                                 }
                                 catch
                                 {
