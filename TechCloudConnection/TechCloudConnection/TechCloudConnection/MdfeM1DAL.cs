@@ -46,7 +46,7 @@ namespace Modelo
 
             MdfeM1DAL mdal = new MdfeM1DAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MDFE_M1 p, empresa E where p.sincronizado = 0");
 
             MdfeM1 m = new MdfeM1();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MDFE_M1 P SET P.IDMDFEM1WEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -248,7 +248,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MDFE_M1 P SET P.IDMDFEM1WEB = " + Convert.ToString(DocumentId) + " WHERE P.iD = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -262,7 +262,7 @@ namespace Modelo
                                     MdfeM1DAL m1dal = new MdfeM1DAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(m.Codigo));
+                                    conn.ExecuteQueries("UPDATE MDFE_M1 P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(m.Codigo));
                                 }
                                 catch
                                 {
