@@ -46,7 +46,7 @@ namespace Modelo
 
             MdfeLacresDAL ldal = new MdfeLacresDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MDFE_LACRES p, empresa E where p.sincronizado = 0");
 
             MdfeLacres l = new MdfeLacres();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MDFE_LACRES P SET P.IDMDFELACRESWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -236,7 +236,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MDFE_LACRES P SET P.IDMDFELACRESWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -250,7 +250,7 @@ namespace Modelo
                                     MdfeLacresDAL lacdal = new MdfeLacresDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(l.Codigo));
+                                    conn.ExecuteQueries("UPDATE MDFE_LACRES P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(l.Codigo));
                                 }
                                 catch
                                 {
