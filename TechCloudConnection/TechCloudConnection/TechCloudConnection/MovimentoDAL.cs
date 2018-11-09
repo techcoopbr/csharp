@@ -46,7 +46,7 @@ namespace Modelo
 
             MovimentoDAL mdal = new MovimentoDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MOVIMENTO p, empresa E where p.sincronizado = 0");
 
             Movimento m = new Movimento();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.IDMOVIMENTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -276,7 +276,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.IDMOVIMENTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -290,7 +290,7 @@ namespace Modelo
                                     MovimentoDAL movdal = new MovimentoDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(m.Codigo));
+                                    conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(m.Codigo));
                                 }
                                 catch
                                 {
