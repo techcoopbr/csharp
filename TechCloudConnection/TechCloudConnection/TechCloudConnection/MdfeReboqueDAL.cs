@@ -46,7 +46,7 @@ namespace Modelo
 
             MdfeReboqueDAL rdal = new MdfeReboqueDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MDFE_REBOQUE p, empresa E where p.sincronizado = 0");
 
             MdfeReboque r = new MdfeReboque();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MDFE_REBOQUE P SET P.IDMDFEREBOQUEWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -264,7 +264,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MDFE_REBOQUE P SET P.IDMDFEREBOQUEWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -278,7 +278,7 @@ namespace Modelo
                                     MdfeReboqueDAL rebdal = new MdfeReboqueDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(r.Codigo));
+                                    conn.ExecuteQueries("UPDATE MDFE_REBOQUE P SET P.SINCRONIZADO = 1 WHERE P.ID= " + Convert.ToString(r.Codigo));
                                 }
                                 catch
                                 {
