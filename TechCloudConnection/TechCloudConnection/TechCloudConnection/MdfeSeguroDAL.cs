@@ -46,7 +46,7 @@ namespace Modelo
 
             MdfeSeguroDAL sdal = new MdfeSeguroDAL();
 
-            FbDataReader dr = conn.DataReader("select p.*, e.idweb from NF p, empresa E where p.sincronizado = 0");
+            FbDataReader dr = conn.DataReader("select p.*, e.idweb from MDFE_SEGURO p, empresa E where p.sincronizado = 0");
 
             MdfeSeguro s = new MdfeSeguro();
 
@@ -83,7 +83,7 @@ namespace Modelo
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
                             DocumentId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MDFE_SEGURO P SET P.IDMDFESEGUROWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
@@ -246,7 +246,7 @@ namespace Modelo
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
                                         DocumentId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE NF P SET P.IDNFWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MDFE_SEGURO P SET P.IDMDFESEGUROWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
@@ -260,7 +260,7 @@ namespace Modelo
                                     MdfeSeguroDAL segdal = new MdfeSeguroDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE NF P SET P.SINCRONIZADO = 1 WHERE P.CODIGO = " + Convert.ToString(s.Codigo));
+                                    conn.ExecuteQueries("UPDATE MDFE_SEGURO P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(s.Codigo));
                                 }
                                 catch
                                 {
