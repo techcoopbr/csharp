@@ -175,7 +175,7 @@ namespace Modelo
 
                                 p.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
 
-                                if (dr["codigo"] != DBNull.Value) { p.Codigo = (int)dr["codigo"]; }
+                                if (dr["id"] != DBNull.Value) { p.Codigo = (int)dr["id"]; }
                                 if (dr["descricao"] != DBNull.Value) { p.Descricao = (string)dr["descricao"]; }
                                 if (dr["parcelas"] != DBNull.Value) { p.Parcelas = (int)dr["parcelas"]; }
                                 if (dr["intervalo"] != DBNull.Value) { p.Intervalo = (string)dr["intevalo"]; }
