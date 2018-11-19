@@ -27,3 +27,7 @@ C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConne
 C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CoreCompileInputs.cache
 C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
 C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe.config
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CopyComplete

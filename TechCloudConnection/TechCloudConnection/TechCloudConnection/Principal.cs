@@ -62,14 +62,12 @@ namespace TechCloudConnection
 
                     PessoaDAL pdal = new PessoaDAL();
                     pdal.PostPessoa();
-
+                    
 
                 Thread.Sleep(5000);
 
-
                     ItemDAL idal = new ItemDAL();
                     idal.PostItem();
-
 
 
                 Thread.Sleep(5000);
@@ -80,9 +78,14 @@ namespace TechCloudConnection
 
                 Thread.Sleep(5000);
 
-
                     NfDAL nfdal = new NfDAL();
                     nfdal.PostNf();
+
+
+                Thread.Sleep(5000);
+
+                    PlanovendaDAL plandal = new PlanovendaDAL();
+                    plandal.PostPlanovenda();
 
             }
         }

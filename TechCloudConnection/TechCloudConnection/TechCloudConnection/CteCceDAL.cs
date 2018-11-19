@@ -166,11 +166,11 @@ namespace Modelo
                                 if (DocumentId != 0)
                                 {
                                     c.Codigo = DocumentId;
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO DOCUMENTOS...");
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO CCE...");
                                 }
                                 else
                                 {
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO DOCUMENTOS...");
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO CCE...");
                                 }
 
                                 c.Idweb = (int)Convert.ToInt32(dr["Idweb"]);

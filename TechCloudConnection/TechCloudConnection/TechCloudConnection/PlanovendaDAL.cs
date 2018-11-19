@@ -135,12 +135,12 @@ namespace Modelo
                         if (DocumentId == 0)
                         {
                             //webAddr = "http://localhost:3000/documents";
-                            webAddr = "http://apptechcoop.com.br/documents";
+                            webAddr = "http://apptechcoop.com.br/planovenda";
                         }
                         else
                         {
                             //webAddr = "http://localhost:3000/documents/" + Convert.ToString(DocumentId) + ".json";
-                            webAddr = "http://apptechcoop.com.br/documents/" + Convert.ToString(DocumentId) + ".json";
+                            webAddr = "http://apptechcoop.com.br/planovenda/" + Convert.ToString(DocumentId) + ".json";
                         }
 
                         var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
@@ -166,11 +166,11 @@ namespace Modelo
                                 if (DocumentId != 0)
                                 {
                                     p.Codigo = DocumentId;
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO DOCUMENTOS...");
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO PLANOS DE VENDA...");
                                 }
                                 else
                                 {
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO DOCUMENTOS...");
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO PLANOS DE VENDA...");
                                 }
 
                                 p.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
@@ -304,7 +304,7 @@ namespace Modelo
             }
 
             conn.CloseConnection();
-            NewIniFile.IniWriteString("STATUS", "MSG", "ATUALIZAÇÃO FINALIZADA");
+            NewIniFile.IniWriteString("STATUS", "MSG", "ATUALIZAÇÃO PLANOS DE VENDA FINALIZADA");
         }
 
         public Planovenda ObterPorId(long id)
