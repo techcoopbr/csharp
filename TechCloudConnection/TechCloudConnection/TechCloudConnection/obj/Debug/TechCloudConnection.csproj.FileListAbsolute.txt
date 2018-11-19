@@ -9,3 +9,25 @@ D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Deb
 D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
 D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
 D:\Fontes\C#\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe.config
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csprojAssemblyReference.cache
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.frmPrincipal.resources
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.Properties.Resources.resources
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.GenerateResource.cache
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CoreCompileInputs.cache
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CopyComplete
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
+C:\Techcoop Csharp\csharp-master\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csprojAssemblyReference.cache
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.frmPrincipal.resources
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.Properties.Resources.resources
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.GenerateResource.cache
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CoreCompileInputs.cache
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.exe
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe.config
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.exe
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\bin\Debug\TechCloudConnection.pdb
+C:\Techcoop Csharp\csharp\TechCloudConnection\TechCloudConnection\TechCloudConnection\obj\Debug\TechCloudConnection.csproj.CopyComplete
