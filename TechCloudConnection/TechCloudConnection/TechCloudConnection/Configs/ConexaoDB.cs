@@ -53,7 +53,6 @@ namespace ConexaoDB
         {
             conn = new FbConnection(strConn); //conecta utilizando a stri
             conn.Open();
-
         }
 
 

@@ -130,7 +130,9 @@
     <Compile Include="NfDAL.cs" />
     <Compile Include="Nfproduto.cs" />
     <Compile Include="NfprodutoDAL.cs" />
+    <Compile Include="CaixaMovimento.cs" />
     <Compile Include="Operacoes.cs" />
+    <Compile Include="CaixaMovimentoDAL.cs" />
     <Compile Include="OperacoesDAL.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="PessoaDAL.cs" />

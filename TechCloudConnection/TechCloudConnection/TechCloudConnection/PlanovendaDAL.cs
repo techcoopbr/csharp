@@ -92,40 +92,6 @@ namespace Modelo
                         DocumentId = 0;
                     }
 
-                    // ENCONTRA O ID FOLK DA PESSOA DA DUPLICATA
-                    try
-                    {
-                        //string webAddrD = "http://localhost:3000/folk_accounts/" + Convert.ToString(dr["idpessoas"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
-
-                        string webAddrD = "http://apptechcoop.com.br/folk_accounts/" + Convert.ToString(dr["idpessoas"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
-
-                        var httpWebRequesttD = (HttpWebRequest)WebRequest.Create(webAddrD);
-                        httpWebRequesttD.ContentType = "application/json; charset=utf-8";
-                        httpWebRequesttD.Method = "GET";
-
-                        String usernameeD = "admin@jefferson.com";
-                        String passworddD = "2311luje2311";
-                        String encodeddD = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernameeD + ":" + passworddD));
-                        httpWebRequesttD.Headers.Add("Authorization", "Basic " + encodeddD);
-
-
-
-                        var httpResponseeD = (HttpWebResponse)httpWebRequesttD.GetResponse();
-
-                        using (var streamReaderrD = new StreamReader(httpResponseeD.GetResponseStream()))
-                        {
-                            var responseTexttD = streamReaderrD.ReadToEnd();
-                            var serializerD = new JavaScriptSerializer();
-                            dynamic usrD = serializerD.DeserializeObject(responseTexttD);
-                            //p.Idfolk = usrD["id"];
-                            // >>>>>>  não existe o campo idfolk na tabela operacoes  <<<<<<
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        //p.Idfolk = 0;
-                    }
-
                     //////////////////////////////////////////////
                     try
                     {

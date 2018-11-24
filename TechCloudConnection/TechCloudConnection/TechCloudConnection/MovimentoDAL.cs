@@ -55,13 +55,13 @@ namespace Modelo
                 while (dr.Read())
                 {
 
-                    int DocumentId = 0;
+                    int CashId = 0;
                     // ENCONTRA O ID ACCOUNT DA EMPRESA DONA DA DUPLICATA
                     try
                     {
-                        //string webAddrr = "http://localhost:3000/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                        //string webAddrr = "http://www.techcoop.com.br/cash_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
-                        string webAddrr = "http://apptechcoop.com.br/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                        string webAddrr = "http://www.techcoop.com.br/cash_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
                         var httpWebRequestt = (HttpWebRequest)WebRequest.Create(webAddrr);
                         httpWebRequestt.ContentType = "application/json; charset=utf-8";
@@ -81,49 +81,15 @@ namespace Modelo
                             var responseTextt = streamReaderr.ReadToEnd();
                             var serializerr = new JavaScriptSerializer();
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
-                            DocumentId = usr["id"];
+                            CashId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.IDMOVIMENTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.IDMOVIMENTOWEB = " + Convert.ToString(CashId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
                     catch (Exception e)
                     {
-                        DocumentId = 0;
-                    }
-
-                    // ENCONTRA O ID FOLK DA PESSOA DA DUPLICATA
-                    try
-                    {
-                        //string webAddrD = "http://localhost:3000/folk_accounts/" + Convert.ToString(dr["idpessoas"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
-
-                        string webAddrD = "http://apptechcoop.com.br/folk_accounts/" + Convert.ToString(dr["idpessoas"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
-
-                        var httpWebRequesttD = (HttpWebRequest)WebRequest.Create(webAddrD);
-                        httpWebRequesttD.ContentType = "application/json; charset=utf-8";
-                        httpWebRequesttD.Method = "GET";
-
-                        String usernameeD = "admin@jefferson.com";
-                        String passworddD = "2311luje2311";
-                        String encodeddD = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernameeD + ":" + passworddD));
-                        httpWebRequesttD.Headers.Add("Authorization", "Basic " + encodeddD);
-
-
-
-                        var httpResponseeD = (HttpWebResponse)httpWebRequesttD.GetResponse();
-
-                        using (var streamReaderrD = new StreamReader(httpResponseeD.GetResponseStream()))
-                        {
-                            var responseTexttD = streamReaderrD.ReadToEnd();
-                            var serializerD = new JavaScriptSerializer();
-                            dynamic usrD = serializerD.DeserializeObject(responseTexttD);
-                            //p.Idfolk = usrD["id"];
-                            // >>>>>>  não existe o campo idfolk na tabela movimentos  <<<<<<
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        //p.Idfolk = 0;
+                        CashId = 0;
                     }
 
                     //////////////////////////////////////////////
@@ -132,20 +98,20 @@ namespace Modelo
 
                         string webAddr;
 
-                        if (DocumentId == 0)
+                        if (CashId == 0)
                         {
-                            //webAddr = "http://localhost:3000/documents";
-                            webAddr = "http://apptechcoop.com.br/documents";
+                            //webAddr = "http://localhost:3000/cashes";
+                            webAddr = "http://apptechcoop.com.br/cashes";
                         }
                         else
                         {
-                            //webAddr = "http://localhost:3000/documents/" + Convert.ToString(DocumentId) + ".json";
-                            webAddr = "http://apptechcoop.com.br/documents/" + Convert.ToString(DocumentId) + ".json";
+                            //webAddr = "http://localhost:3000/cashes/" + Convert.ToString(DocumentId) + ".json";
+                            webAddr = "http://apptechcoop.com.br/cashes/" + Convert.ToString(CashId) + ".json";
                         }
 
                         var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
                         httpWebRequest.ContentType = "application/json; charset=utf-8";
-                        if (DocumentId == 0)
+                        if (CashId == 0)
                         {
                             httpWebRequest.Method = "POST";
                         }
@@ -163,14 +129,14 @@ namespace Modelo
                         {
                             if (Convert.ToInt32(dr["Idweb"]) > 0)
                             {
-                                if (DocumentId != 0)
+                                if (CashId != 0)
                                 {
-                                    m.Codigo = DocumentId;
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO DOCUMENTOS...");
+                                    m.Codigo = CashId;
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO MOVIMENTO...");
                                 }
                                 else
                                 {
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO DOCUMENTOS...");
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO MOVIMENTO...");
                                 }
 
                                 m.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
@@ -198,15 +164,14 @@ namespace Modelo
                                 if (dr["ccf"] != DBNull.Value) { m.Ccf = (int)dr["ccf"]; }
                                 if (dr["md5"] != DBNull.Value) { m.Md5 = (string)dr["md5"]; }
                                 if (dr["manual"] != DBNull.Value) { m.Manual = (int)dr["manual"]; }
-                                if (dr["account_id"] != DBNull.Value) { m.Idweb = (int)dr["account_id"]; }
-                                
+                                                                
                                 
                                 //pdal.PostNf(p);
 
                                 string json = "{ ";
-                                if (DocumentId != 0)
+                                if (CashId != 0)
                                 {
-                                    json = json + "\"id\" :\"" + DocumentId + "\", ";
+                                    json = json + "\"id\" :\"" + CashId + "\", ";
                                 }
                                 json = json + "\"codigo\":\"" + m.Codigo + "\"," +
                                      "\"codigo\":\"" + m.Codigo + "\"," +
@@ -252,9 +217,9 @@ namespace Modelo
                                 // ENCONTRA O ID ACCOUNT DA EMPRESA DONA DA DUPLICATA
                                 try
                                 {
-                                    //string webAddrr = "http://localhost:3000/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                                    //string webAddrr = "http://localhost:3000/cash_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
-                                    string webAddrr = "http://apptechcoop.com.br/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                                    string webAddrr = "http://apptechcoop.com.br/cash_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
                                     var httpWebRequestt = (HttpWebRequest)WebRequest.Create(webAddrr);
                                     httpWebRequestt.ContentType = "application/json; charset=utf-8";
@@ -265,8 +230,6 @@ namespace Modelo
                                     String encodedd = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernamee + ":" + passwordd));
                                     httpWebRequestt.Headers.Add("Authorization", "Basic " + encodedd);
 
-
-
                                     var httpResponsee = (HttpWebResponse)httpWebRequestt.GetResponse();
 
                                     using (var streamReaderr = new StreamReader(httpResponsee.GetResponseStream()))
@@ -274,15 +237,15 @@ namespace Modelo
                                         var responseTextt = streamReaderr.ReadToEnd();
                                         var serializerr = new JavaScriptSerializer();
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
-                                        DocumentId = usr["id"];
+                                        CashId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.IDMOVIMENTOWEB = " + Convert.ToString(DocumentId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE MOVIMENTO P SET P.IDMOVIMENTOWEB = " + Convert.ToString(CashId) + " WHERE P.CODIGO = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
                                 catch (Exception e)
                                 {
-                                    DocumentId = 0;
+                                    CashId = 0;
                                 }
 
                                 try

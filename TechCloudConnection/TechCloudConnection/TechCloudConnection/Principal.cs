@@ -58,6 +58,22 @@ namespace TechCloudConnection
         {
             while (1 == 1)
             {
+
+                Thread.Sleep(5000);
+
+                    CaixaMovimentoDAL CaixaMov = new CaixaMovimentoDAL();
+                    CaixaMov.PostCaixaMovimento();
+
+                Thread.Sleep(5000);
+
+                    OperacoesDAL movOp = new OperacoesDAL();
+                    movOp.PostOperacoes();
+
+                Thread.Sleep(5000);
+
+                    MovimentoDAL movdal = new MovimentoDAL();
+                    movdal.PostMovimento();
+
                 Thread.Sleep(5000);
 
                     PessoaDAL pdal = new PessoaDAL();
@@ -82,10 +98,10 @@ namespace TechCloudConnection
                     nfdal.PostNf();
 
 
-                Thread.Sleep(5000);
+              //  Thread.Sleep(5000);
 
-                    PlanovendaDAL plandal = new PlanovendaDAL();
-                    plandal.PostPlanovenda();
+              //      PlanovendaDAL plandal = new PlanovendaDAL();
+              //      plandal.PostPlanovenda();
 
             }
         }

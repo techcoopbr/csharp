@@ -8,7 +8,7 @@ namespace Modelo
         public int Operacao { get; set; }
         public int Tipo { get; set; }
         public string Descricao { get; set; }
-        public bool Ativo { get; set; }
+        public int Ativo { get; set; }
         public int Estoque { get; set; }
         public decimal Descontomaximo { get; set; }
         public decimal Acrescimomaximo { get; set; }

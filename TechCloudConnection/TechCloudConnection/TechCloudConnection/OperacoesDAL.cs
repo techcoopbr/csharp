@@ -55,13 +55,13 @@ namespace Modelo
                 while (dr.Read())
                 {
 
-                    int DocumentId = 0;
+                    int OperacaoId = 0;
                     // ENCONTRA O ID ACCOUNT DA EMPRESA DONA DA DUPLICATA
                     try
                     {
-                        //string webAddrr = "http://localhost:3000/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                        //string webAddrr = "http://localhost:3000/operation_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
-                        string webAddrr = "http://apptechcoop.com.br/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                        string webAddrr = "http://apptechcoop.com.br/operation_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
                         var httpWebRequestt = (HttpWebRequest)WebRequest.Create(webAddrr);
                         httpWebRequestt.ContentType = "application/json; charset=utf-8";
@@ -81,71 +81,36 @@ namespace Modelo
                             var responseTextt = streamReaderr.ReadToEnd();
                             var serializerr = new JavaScriptSerializer();
                             dynamic usr = serializerr.DeserializeObject(responseTextt);
-                            DocumentId = usr["id"];
+                            OperacaoId = usr["id"];
 
-                            conn.ExecuteQueries("UPDATE OPERACOES P SET P.IDOPERACOESWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
+                            conn.ExecuteQueries("UPDATE OPERACOES P SET P.IDOPERACOESWEB = " + Convert.ToString(OperacaoId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                         }
                     }
                     catch (Exception e)
                     {
-                        DocumentId = 0;
+                        OperacaoId = 0;
                     }
 
-                    // ENCONTRA O ID FOLK DA PESSOA DA DUPLICATA
-                    try
-                    {
-                        //string webAddrD = "http://localhost:3000/folk_accounts/" + Convert.ToString(dr["idpessoas"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
-
-                        string webAddrD = "http://apptechcoop.com.br/folk_accounts/" + Convert.ToString(dr["idpessoas"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
-
-                        var httpWebRequesttD = (HttpWebRequest)WebRequest.Create(webAddrD);
-                        httpWebRequesttD.ContentType = "application/json; charset=utf-8";
-                        httpWebRequesttD.Method = "GET";
-
-                        String usernameeD = "admin@jefferson.com";
-                        String passworddD = "2311luje2311";
-                        String encodeddD = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernameeD + ":" + passworddD));
-                        httpWebRequesttD.Headers.Add("Authorization", "Basic " + encodeddD);
-
-
-
-                        var httpResponseeD = (HttpWebResponse)httpWebRequesttD.GetResponse();
-
-                        using (var streamReaderrD = new StreamReader(httpResponseeD.GetResponseStream()))
-                        {
-                            var responseTexttD = streamReaderrD.ReadToEnd();
-                            var serializerD = new JavaScriptSerializer();
-                            dynamic usrD = serializerD.DeserializeObject(responseTexttD);
-                            //p.Idfolk = usrD["id"];
-                            // >>>>>>  não existe o campo idfolk na tabela operacoes  <<<<<<
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        //p.Idfolk = 0;
-                    }
-
-                    //////////////////////////////////////////////
                     try
                     {
 
                         string webAddr;
 
-                        if (DocumentId == 0)
+                        if (OperacaoId == 0)
                         {
-                            //webAddr = "http://localhost:3000/documents";
-                            webAddr = "http://apptechcoop.com.br/documents";
+                            //webAddr = "http://localhost:3000/operations";
+                            webAddr = "http://apptechcoop.com.br/operations";
                         }
                         else
                         {
-                            //webAddr = "http://localhost:3000/documents/" + Convert.ToString(DocumentId) + ".json";
-                            webAddr = "http://apptechcoop.com.br/documents/" + Convert.ToString(DocumentId) + ".json";
+                            //webAddr = "http://localhost:3000/operations/" + Convert.ToString(DocumentId) + ".json";
+                            webAddr = "http://apptechcoop.com.br/operations/" + Convert.ToString(OperacaoId) + ".json";
                         }
 
                         var httpWebRequest = (HttpWebRequest)WebRequest.Create(webAddr);
                         httpWebRequest.ContentType = "application/json; charset=utf-8";
-                        if (DocumentId == 0)
+                        if (OperacaoId == 0)
                         {
                             httpWebRequest.Method = "POST";
                         }
@@ -163,14 +128,14 @@ namespace Modelo
                         {
                             if (Convert.ToInt32(dr["Idweb"]) > 0)
                             {
-                                if (DocumentId != 0)
+                                if (OperacaoId != 0)
                                 {
-                                    o.Codigo = DocumentId;
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO DOCUMENTOS...");
+                                    o.Codigo = OperacaoId;
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO OPERAÇÕES...");
                                 }
                                 else
                                 {
-                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO DOCUMENTOS...");
+                                    NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: INSERINDO OPERAÇÕES...");
                                 }
 
                                 o.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
@@ -179,7 +144,7 @@ namespace Modelo
                                 if (dr["operacao"] != DBNull.Value) { o.Operacao = (int)dr["operacao"]; }
                                 if (dr["tipo"] != DBNull.Value) { o.Tipo = (int)dr["tipo"]; }
                                 if (dr["descricao"] != DBNull.Value) { o.Descricao = (string)dr["descricao"]; }
-                                if (dr["ativo"] != DBNull.Value) { o.Ativo = (bool)dr["ativo"]; }
+                                if (dr["ativo"] != DBNull.Value) { o.Ativo = (Int16)dr["ativo"]; }
                                 if (dr["estoque"] != DBNull.Value) { o.Estoque = (int)dr["estoque"]; }
                                 if (dr["descontomaximo"] != DBNull.Value) { o.Descontomaximo = (decimal)dr["descontomaximo"]; }
                                 if (dr["acrescimomaximo"] != DBNull.Value) { o.Acrescimomaximo = (decimal)dr["acrescimomaximo"]; }
@@ -194,18 +159,15 @@ namespace Modelo
                                 if (dr["formapgtoecf"] != DBNull.Value) { o.Formapgtoecf = (string)dr["formapgtoecf"]; }
                                 if (dr["md5"] != DBNull.Value) { o.Md5 = (string)dr["md5"]; }
                                 if (dr["operacaocte"] != DBNull.Value) { o.Operacaocte = (int)dr["operacaocte"]; }
-                                if (dr["diasposvenda"] != DBNull.Value) { o.Diasaposvenda = (int)dr["diasposvenda"]; }
-                                if (dr["pagacocmissao"] != DBNull.Value) { o.Pagacomissao = (int)dr["pagacomissao"]; }
+                                if (dr["diasaposvenda"] != DBNull.Value) { o.Diasaposvenda = (int)dr["diasaposvenda"]; }
+                                if (dr["pagacomissao"] != DBNull.Value) { o.Pagacomissao = (int)dr["pagacomissao"]; }
                                 if (dr["operacaodav"] != DBNull.Value) { o.Operacaodav = (int)dr["operacaodav"]; }
                                 if (dr["es_naturezarubrica"] != DBNull.Value) { o.Es_naturezarubrica = (int)dr["es_naturezarubrica"]; }
-                                if (dr["account_id"] != DBNull.Value) { o.Idweb = (int)dr["account_id"]; }
 
-        //pdal.PostNf(p);
-
-        string json = "{ ";
-                                if (DocumentId != 0)
+                            string json = "{ ";
+                                if (OperacaoId != 0)
                                 {
-                                    json = json + "\"id\" :\"" + DocumentId + "\", ";
+                                    json = json + "\"id\" :\"" + OperacaoId + "\", ";
                                 }
                                 json = json + "\"codigo\":\"" + o.Codigo + "\"," +
                                      "\"codigo\":\"" + o.Codigo + "\"," +
@@ -250,9 +212,9 @@ namespace Modelo
                                 // ENCONTRA O ID ACCOUNT DA EMPRESA DONA DA DUPLICATA
                                 try
                                 {
-                                    //string webAddrr = "http://localhost:3000/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                                    //string webAddrr = "http://localhost:3000/operations_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
-                                    string webAddrr = "http://apptechcoop.com.br/document_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                                    string webAddrr = "http://apptechcoop.com.br/operations_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
                                     var httpWebRequestt = (HttpWebRequest)WebRequest.Create(webAddrr);
                                     httpWebRequestt.ContentType = "application/json; charset=utf-8";
@@ -272,15 +234,15 @@ namespace Modelo
                                         var responseTextt = streamReaderr.ReadToEnd();
                                         var serializerr = new JavaScriptSerializer();
                                         dynamic usr = serializerr.DeserializeObject(responseTextt);
-                                        DocumentId = usr["id"];
+                                        OperacaoId = usr["id"];
 
-                                        conn.ExecuteQueries("UPDATE OPERACOES P SET P.IDOPERACOESWEB = " + Convert.ToString(DocumentId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
+                                        conn.ExecuteQueries("UPDATE OPERACOES P SET P.IDOPERACOESWEB = " + Convert.ToString(OperacaoId) + " WHERE P.ID = " + Convert.ToString((int)dr["codigo"]));
 
                                     }
                                 }
                                 catch (Exception e)
                                 {
-                                    DocumentId = 0;
+                                    OperacaoId = 0;
                                 }
 
                                 try
