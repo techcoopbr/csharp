@@ -4,7 +4,8 @@ namespace Modelo
 {
     class CaixaMovimento
     {
-        public int Idmovimentocaixa { get; set; }
+        public int Id { get; set; }
+        public int Idcaixamovimento { get; set; }
         public int Idcaixa { get; set; }
         public int Idfuncionario { get; set; }
         public DateTime Dataabertura { get; set; }

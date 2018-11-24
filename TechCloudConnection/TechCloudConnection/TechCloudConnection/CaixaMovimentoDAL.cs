@@ -15,7 +15,7 @@ namespace Modelo
     {
         public void Gravar(CaixaMovimento caixamovimentos)
         {
-            if (caixamovimentos.Idmovimentocaixa == 0)
+            if (caixamovimentos.Idcaixamovimento == 0)
                 Inserir(caixamovimentos);
             else
                 Atualizar(caixamovimentos);
@@ -130,7 +130,7 @@ namespace Modelo
                             {
                                 if (CaixaMovimentoId != 0)
                                 {
-                                    o.Idmovimentocaixa = CaixaMovimentoId;
+                                    o.Id = CaixaMovimentoId;
                                     NewIniFile.IniWriteString("STATUS", "MSG", "STATUS: ATUALIZANDO CAIXAS...");
                                 }
                                 else
@@ -140,7 +140,7 @@ namespace Modelo
 
                                 o.Idweb = (int)Convert.ToInt32(dr["Idweb"]);
 
-                                if (dr["id"] != DBNull.Value) { o.Idmovimentocaixa = (int)dr["id"]; }
+                                if (dr["id"] != DBNull.Value) { o.Idcaixamovimento = (int)dr["id"]; }
                                 if (dr["Idcaixa"] != DBNull.Value) { o.Idcaixa = (int)dr["Idcaixa"]; }
                                 if (dr["Idfuncionario"] != DBNull.Value) { o.Idfuncionario = (int)dr["Idfuncionario"]; }
                                 if (dr["Dataabertura"] != DBNull.Value) { o.Dataabertura = (DateTime)dr["Dataabertura"]; }
@@ -165,24 +165,25 @@ namespace Modelo
                                 {
                                     json = json + "\"id\" :\"" + CaixaMovimentoId + "\", ";
                                 }
-                                json = json + "\"Idmovimentocaixa\":\"" + o.Idmovimentocaixa + "\"," +
-                                     "\"Idcaixa\":\"" + o.Idcaixa + "\"," +
-                                     "\"Idfuncionario\":\"" + o.Idfuncionario + "\"," +
-                                     "\"Dataabertura\":\"" + o.Dataabertura + "\"," +
-                                     "\"Horaabertura\":\"" + o.Horaabertura + "\"," +
-                                     "\"Datafechamento\":\"" + o.Datafechamento + "\"," +
-                                     "\"Horafechamento\":\"" + o.Horafechamento + "\"," +
-                                     "\"Valordinheiro\":\"" + o.Valordinheiro + "\"," +
-                                     "\"Valorcartaodebito\":\"" + o.Valorcartaodebito + "\"," +
-                                     "\"Valorcartaocredito\":\"" + o.Valorcartaocredito + "\"," +
-                                     "\"Valorcheque\":\"" + o.Valorcheque + "\"," +
-                                     "\"Valorprazo\":\"" + o.Valorprazo + "\"," +
-                                     "\"Totalcaixa\":\"" + o.Totalcaixa + "\"," +
-                                     "\"Trocoinicial\":\"" + o.Trocoinicial + "\"," +
-                                     "\"Trocofinal\":\"" + o.Trocofinal + "\"," +
-                                     "\"Empresa\":\"" + o.Empresa + "\"," +
-                                     "\"Verificado\":\"" + o.Verificado + "\"," +
-                                     "\"Valoroutro\":\"" + o.Valoroutro + "\"," +
+                                json = json + "\"idcaixamovimento\":\"" + o.Idcaixamovimento + "\"," +
+                                     "\"idcaixamovimento\":\"" + o.Idcaixamovimento + "\"," +
+                                     "\"idcaixa\":\"" + o.Idcaixa + "\"," +
+                                     "\"idfuncionario\":\"" + o.Idfuncionario + "\"," +
+                                     "\"dataabertura\":\"" + o.Dataabertura + "\"," +
+                                     "\"horaabertura\":\"" + o.Horaabertura + "\"," +
+                                     "\"datafechamento\":\"" + o.Datafechamento + "\"," +
+                                     "\"horafechamento\":\"" + o.Horafechamento + "\"," +
+                                     "\"valordinheiro\":\"" + o.Valordinheiro + "\"," +
+                                     "\"valorcartaodebito\":\"" + o.Valorcartaodebito + "\"," +
+                                     "\"valorcartaocredito\":\"" + o.Valorcartaocredito + "\"," +
+                                     "\"valorcheque\":\"" + o.Valorcheque + "\"," +
+                                     "\"valorprazo\":\"" + o.Valorprazo + "\"," +
+                                     "\"totalcaixa\":\"" + o.Totalcaixa + "\"," +
+                                     "\"trocoinicial\":\"" + o.Trocoinicial + "\"," +
+                                     "\"trocofinal\":\"" + o.Trocofinal + "\"," +
+                                     "\"empresa\":\"" + o.Empresa + "\"," +
+                                     "\"verificado\":\"" + o.Verificado + "\"," +
+                                     "\"valoroutro\":\"" + o.Valoroutro + "\"," +
                                      "\"account_id\" :\"" + o.Idweb + "\"}";
 
                                 json = json.Replace("\r\n", "");
@@ -239,7 +240,7 @@ namespace Modelo
                                     OperacoesDAL opedal = new OperacoesDAL();
                                     //movdal.PostNfproduto((int)dr["codigo"]);
 
-                                    conn.ExecuteQueries("UPDATE CAIXAMOVIMENTO P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(o.Idmovimentocaixa));
+                                    conn.ExecuteQueries("UPDATE CAIXAMOVIMENTO P SET P.SINCRONIZADO = 1 WHERE P.ID = " + Convert.ToString(o.Idcaixamovimento));
                                 }
                                 catch
                                 {
