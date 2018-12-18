@@ -59,9 +59,12 @@ namespace Modelo
                     // ENCONTRA O ID ACCOUNT DA EMPRESA DONA DA DUPLICATA
                     try
                     {
+                        CaixaMovimentoId = TechCloudConnection.Login.json(dr, conn, CaixaMovimentoId, "http://apptechcoop.com.br/caixa_movimento_accounts/");
+
+
                         //string webAddrr = "http://localhost:3000/caixa_movimento_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
-                        string webAddrr = "http://apptechcoop.com.br/caixa_movimento_accounts/" + Convert.ToString(dr["id"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
+                        /*string webAddrr = "http://apptechcoop.com.br/caixa_movimento_accounts/" + Convert.ToString(dr["id"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
                         var httpWebRequestt = (HttpWebRequest)WebRequest.Create(webAddrr);
                         httpWebRequestt.ContentType = "application/json; charset=utf-8";
@@ -85,7 +88,7 @@ namespace Modelo
 
                             conn.ExecuteQueries("UPDATE CAIXAMOVIMENTO P SET P.IDCAIXAMOVIMENTOWEB = " + Convert.ToString(CaixaMovimentoId) + " WHERE P.ID = " + Convert.ToString((int)dr["id"]));
 
-                        }
+                        }*/
                     }
                     catch (Exception e)
                     {
@@ -119,10 +122,12 @@ namespace Modelo
                             httpWebRequest.Method = "PUT";
                         }
 
-                        String username = "admin@jefferson.com";
+                        TechCloudConnection.Login.login(httpWebRequest);
+
+                        /*String username = "admin@jefferson.com";
                         String password = "2311luje2311";
                         String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(username + ":" + password));
-                        httpWebRequest.Headers.Add("Authorization", "Basic " + encoded);
+                        httpWebRequest.Headers.Add("Authorization", "Basic " + encoded);*/
 
                         using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                         {

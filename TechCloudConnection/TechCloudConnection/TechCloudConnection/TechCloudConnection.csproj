@@ -94,6 +94,7 @@
     <Compile Include="DuplicataDAL.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemDAL.cs" />
+    <Compile Include="Login.cs" />
     <Compile Include="Mdfe.cs" />
     <Compile Include="MdfeCarregamento.cs" />
     <Compile Include="MdfeCarregamentoDAL.cs" />
