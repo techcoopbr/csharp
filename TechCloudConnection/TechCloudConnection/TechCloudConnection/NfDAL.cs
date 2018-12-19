@@ -66,10 +66,9 @@ namespace Persistencia
                         httpWebRequestt.ContentType = "application/json; charset=utf-8";
                         httpWebRequestt.Method = "GET";
 
-                        String usernamee = "admin@jefferson.com";
-                        String passwordd = "2311luje2311";
-                        String encodedd = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernamee + ":" + passwordd));
-                        httpWebRequestt.Headers.Add("Authorization", "Basic " + encodedd);
+                        Login.login();
+
+                        httpWebRequestt.Headers.Add("Authorization", "Basic " + Login.encoded);
 
 
 
@@ -102,10 +101,9 @@ namespace Persistencia
                         httpWebRequesttD.ContentType = "application/json; charset=utf-8";
                         httpWebRequesttD.Method = "GET";
 
-                        String usernameeD = "admin@jefferson.com";
-                        String passworddD = "2311luje2311";
-                        String encodeddD = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernameeD + ":" + passworddD));
-                        httpWebRequesttD.Headers.Add("Authorization", "Basic " + encodeddD);
+                        Login.login();
+
+                        httpWebRequesttD.Headers.Add("Authorization", "Basic " + Login.encoded);
 
 
 
@@ -153,10 +151,9 @@ namespace Persistencia
                             httpWebRequest.Method = "PUT";
                         }
 
-                        String username = "admin@jefferson.com";
-                        String password = "2311luje2311";
-                        String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(username + ":" + password));
-                        httpWebRequest.Headers.Add("Authorization", "Basic " + encoded);
+                        Login.login();
+
+                        httpWebRequest.Headers.Add("Authorization", "Basic " + Login.encoded);
 
                         using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                         {

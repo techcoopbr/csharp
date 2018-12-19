@@ -8,7 +8,6 @@ using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Web.Script.Serialization;
-using TechCloudConnection;
 
 namespace Modelo
 {
@@ -60,8 +59,6 @@ namespace Modelo
                     // ENCONTRA O ID ACCOUNT DA EMPRESA DONA DA DUPLICATA
                     try
                     {
-                        //CaixaMovimentoId = TechCloudConnection.Login.json(dr, conn, CaixaMovimentoId, "http://apptechcoop.com.br/caixa_movimento_accounts/");
-
 
                         //string webAddrr = "http://localhost:3000/caixa_movimento_accounts/" + Convert.ToString(dr["codigo"]) + "/" + Convert.ToString(dr["Idweb"]) + ".json";
 
@@ -74,13 +71,6 @@ namespace Modelo
                         Login.login();
 
                         httpWebRequestt.Headers.Add("Authorization", "Basic " + Login.encoded);
-
-                        /*String usernamee = "admin@jefferson.com";
-                        String passwordd = "2311luje2311";
-                        String encodedd = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernamee + ":" + passwordd));
-                        httpWebRequestt.Headers.Add("Authorization", "Basic " + encodedd);*/
-
-
 
                         var httpResponsee = (HttpWebResponse)httpWebRequestt.GetResponse();
 
@@ -130,11 +120,6 @@ namespace Modelo
                         Login.login();
 
                         httpWebRequest.Headers.Add("Authorization", "Basic " + Login.encoded);
-
-                        /*String username = "admin@jefferson.com";
-                        String password = "2311luje2311";
-                        String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(username + ":" + password));
-                        httpWebRequest.Headers.Add("Authorization", "Basic " + encoded);*/
 
                         using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                         {

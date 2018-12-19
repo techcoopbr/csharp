@@ -59,12 +59,12 @@ namespace TechCloudConnection
             while (1 == 1)
             {
 
-                Thread.Sleep(5000);
+                /*Thread.Sleep(5000);
 
                     CaixaMovimentoDAL CaixaMov = new CaixaMovimentoDAL();
                     CaixaMov.PostCaixaMovimento();
 
-                Thread.Sleep(5000);
+                /*Thread.Sleep(5000);
 
                     OperacoesDAL movOp = new OperacoesDAL();
                     movOp.PostOperacoes();
@@ -72,7 +72,7 @@ namespace TechCloudConnection
                 Thread.Sleep(5000);
 
                     MovimentoDAL movdal = new MovimentoDAL();
-                    movdal.PostMovimento();
+                    movdal.PostMovimento();*/
 
                 Thread.Sleep(5000);
 
@@ -86,7 +86,7 @@ namespace TechCloudConnection
                     idal.PostItem();
 
 
-                Thread.Sleep(5000);
+                /*Thread.Sleep(5000);
 
                     DuplicataDAL ddal = new DuplicataDAL();
                     ddal.PostDuplicata();
@@ -95,7 +95,7 @@ namespace TechCloudConnection
                 Thread.Sleep(5000);
 
                     NfDAL nfdal = new NfDAL();
-                    nfdal.PostNf();
+                    nfdal.PostNf();*/
 
 
               //  Thread.Sleep(5000);

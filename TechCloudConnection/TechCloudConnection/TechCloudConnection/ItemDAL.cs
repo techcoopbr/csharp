@@ -8,6 +8,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Web.Script.Serialization;
+using TechCloudConnection;
 
 namespace Persistencia
 {
@@ -67,10 +68,12 @@ namespace Persistencia
                         httpWebRequestt.ContentType = "application/json; charset=utf-8";
                         httpWebRequestt.Method = "GET";
 
-                        String usernamee = "admin@jefferson.com";
+                        Login.login();
+
+                        /*String usernamee = "admin@jefferson.com";
                         String passwordd = "2311luje2311";
-                        String encodedd = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernamee + ":" + passwordd));
-                        httpWebRequestt.Headers.Add("Authorization", "Basic " + encodedd);
+                        String encodedd = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(usernamee + ":" + passwordd));*/
+                        httpWebRequestt.Headers.Add("Authorization", "Basic " + Login.encoded);
 
 
 
@@ -127,10 +130,12 @@ namespace Persistencia
                             httpWebRequest.Method = "PUT";
                         }
 
-                        String username = "admin@jefferson.com";
+                        Login.login();
+
+                        /*String username = "admin@jefferson.com";
                         String password = "2311luje2311";
-                        String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(username + ":" + password));
-                        httpWebRequest.Headers.Add("Authorization", "Basic " + encoded);
+                        String encoded = System.Convert.ToBase64String(System.Text.Encoding.GetEncoding("utf-8").GetBytes(username + ":" + password));*/
+                        httpWebRequest.Headers.Add("Authorization", "Basic " + Login.encoded);
 
                         using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
                         {
