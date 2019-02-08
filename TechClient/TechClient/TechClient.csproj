@@ -71,6 +71,7 @@
     <Compile Include="Boi_Era.cs" />
     <Compile Include="Boi_Invernada.cs" />
     <Compile Include="Boi_Lancamento.cs" />
+    <Compile Include="Boi_Pasto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
