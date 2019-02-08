@@ -136,6 +136,7 @@
     <Compile Include="Duplicatas.cs" />
     <Compile Include="Duplicatas_Baixas.cs" />
     <Compile Include="Ecf.cs" />
+    <Compile Include="Ecf_DocumentosEmitidos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
