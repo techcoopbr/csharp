@@ -73,6 +73,7 @@
     <Compile Include="Boi_Lancamento.cs" />
     <Compile Include="Boi_Pasto.cs" />
     <Compile Include="Boi_Raca.cs" />
+    <Compile Include="Boi_Retiro.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
