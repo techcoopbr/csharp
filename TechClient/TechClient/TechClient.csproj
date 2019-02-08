@@ -93,6 +93,7 @@
     <Compile Include="ComandasItensLog.cs" />
     <Compile Include="ComandasLog.cs" />
     <Compile Include="ComandasOperacoes.cs" />
+    <Compile Include="Comb_Bicos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
