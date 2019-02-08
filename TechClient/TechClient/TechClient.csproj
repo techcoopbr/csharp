@@ -119,6 +119,7 @@
     <Compile Include="Cte_Cte_Fatura.cs" />
     <Compile Include="Cte_Cte_Lacres.cs" />
     <Compile Include="Cte_Cte_Motorista.cs" />
+    <Compile Include="Cte_Cte_ObsContrib.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
