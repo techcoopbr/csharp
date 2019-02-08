@@ -48,6 +48,7 @@
     <Compile Include="AgendaNomes.cs" />
     <Compile Include="Ajuste.cs" />
     <Compile Include="Ajuste_Itens.cs" />
+    <Compile Include="AlertaRevisao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
