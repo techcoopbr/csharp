@@ -60,6 +60,7 @@
     <Compile Include="Apto_Registro_Tarifas.cs" />
     <Compile Include="Apto_Reserva.cs" />
     <Compile Include="Apto_Reserva_Duplicatas.cs" />
+    <Compile Include="Apto_Reserva_Hospedes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
