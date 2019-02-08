@@ -178,6 +178,7 @@
     <Compile Include="Mdfe_ChaveCte.cs" />
     <Compile Include="Mdfe_ChaveNfe.cs" />
     <Compile Include="Mdfe_Ciot.cs" />
+    <Compile Include="Mdfe_Condutor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
