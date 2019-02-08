@@ -113,6 +113,7 @@
     <Compile Include="Cte_Cce.cs" />
     <Compile Include="Cte_Composicao.cs" />
     <Compile Include="Cte_Cte.cs" />
+    <Compile Include="Cte_Cte_Caminhao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
