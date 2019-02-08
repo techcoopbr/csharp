@@ -149,6 +149,7 @@
     <Compile Include="Espera.cs" />
     <Compile Include="Estado.cs" />
     <Compile Include="Es_AgenteNocivos.cs" />
+    <Compile Include="Es_CategoriaTrabalhador.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
