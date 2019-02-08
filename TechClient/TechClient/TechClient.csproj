@@ -46,6 +46,7 @@
     <Compile Include="Acumulador.cs" />
     <Compile Include="Agenda.cs" />
     <Compile Include="AgendaNomes.cs" />
+    <Compile Include="Ajuste.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
