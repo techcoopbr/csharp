@@ -138,6 +138,7 @@
     <Compile Include="Ecf.cs" />
     <Compile Include="Ecf_DocumentosEmitidos.cs" />
     <Compile Include="Ecf_TotalAliquota.cs" />
+    <Compile Include="Ecf_TotalForma.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
