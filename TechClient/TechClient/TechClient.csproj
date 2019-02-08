@@ -125,6 +125,7 @@
     <Compile Include="Cte_Cte_ProdQnt.cs" />
     <Compile Include="Cte_Cte_Seguro.cs" />
     <Compile Include="Cte_Instrucao.cs" />
+    <Compile Include="Cte_Veiculos.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
