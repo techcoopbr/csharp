@@ -57,6 +57,7 @@
     <Compile Include="Apto_Registro_Hospedes.cs" />
     <Compile Include="Apto_Registro_Itens.cs" />
     <Compile Include="Apto_Registro_Operacoes.cs" />
+    <Compile Include="Apto_Registro_Tarifas.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
