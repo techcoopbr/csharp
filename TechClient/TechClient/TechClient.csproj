@@ -146,6 +146,7 @@
     <Compile Include="Empresa.cs" />
     <Compile Include="EmpresaSocios.cs" />
     <Compile Include="Equipamentos.cs" />
+    <Compile Include="Espera.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
