@@ -81,6 +81,7 @@
     <Compile Include="CarteiraBoleto.cs" />
     <Compile Include="CentroCusto.cs" />
     <Compile Include="Cfop.cs" />
+    <Compile Include="Cfop_Operacoes.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
