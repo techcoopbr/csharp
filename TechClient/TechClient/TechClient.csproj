@@ -164,6 +164,7 @@
     <Compile Include="GrupoImpressao.cs" />
     <Compile Include="Integridade.cs" />
     <Compile Include="Juros.cs" />
+    <Compile Include="Liberacao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
