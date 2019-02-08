@@ -102,6 +102,7 @@
     <Compile Include="Comb_Medicao.cs" />
     <Compile Include="Comb_Tanques.cs" />
     <Compile Include="Comissao_Prazo.cs" />
+    <Compile Include="Comissao_Vista.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
