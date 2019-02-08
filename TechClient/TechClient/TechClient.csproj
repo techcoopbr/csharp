@@ -171,6 +171,7 @@
     <Compile Include="Local_Departamento.cs" />
     <Compile Include="Log.cs" />
     <Compile Include="Manifestos.cs" />
+    <Compile Include="MapaEcf.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
