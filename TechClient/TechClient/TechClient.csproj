@@ -52,6 +52,7 @@
     <Compile Include="Apartamentos.cs" />
     <Compile Include="ApartamentoTipo.cs" />
     <Compile Include="ApartamentoTipo_Tarifas.cs" />
+    <Compile Include="Apto_LogTroca.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
