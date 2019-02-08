@@ -162,6 +162,7 @@
     </Compile>
     <Compile Include="Grupo.cs" />
     <Compile Include="GrupoImpressao.cs" />
+    <Compile Include="Integridade.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
