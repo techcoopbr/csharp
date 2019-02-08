@@ -131,6 +131,7 @@
     <Compile Include="Cte_Viagem.cs" />
     <Compile Include="DeparAtributos.cs" />
     <Compile Include="Departamento.cs" />
+    <Compile Include="Desenvolvedora.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
