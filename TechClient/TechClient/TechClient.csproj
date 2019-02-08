@@ -130,6 +130,7 @@
     <Compile Include="Cte_Veiculos_Itens.cs" />
     <Compile Include="Cte_Viagem.cs" />
     <Compile Include="DeparAtributos.cs" />
+    <Compile Include="Departamento.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
