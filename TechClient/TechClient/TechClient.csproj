@@ -99,6 +99,7 @@
     <Compile Include="Comb_Efericao.cs" />
     <Compile Include="Comb_Encerrante.cs" />
     <Compile Include="Comb_Espera.cs" />
+    <Compile Include="Comb_Medicao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
