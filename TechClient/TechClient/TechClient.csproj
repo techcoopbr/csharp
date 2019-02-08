@@ -128,6 +128,7 @@
     <Compile Include="Cte_Veiculos.cs" />
     <Compile Include="Cte_Veiculos_Custos.cs" />
     <Compile Include="Cte_Veiculos_Itens.cs" />
+    <Compile Include="Cte_Viagem.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
