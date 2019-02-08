@@ -175,6 +175,7 @@
     <Compile Include="Marca.cs" />
     <Compile Include="Mdfe.cs" />
     <Compile Include="Mdfe_Carregamento.cs" />
+    <Compile Include="Mdfe_ChaveCte.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
