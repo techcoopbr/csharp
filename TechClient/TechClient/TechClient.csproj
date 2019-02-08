@@ -83,6 +83,7 @@
     <Compile Include="Cfop.cs" />
     <Compile Include="Cfop_Operacoes.cs" />
     <Compile Include="Cheque.cs" />
+    <Compile Include="ChequeItens.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
