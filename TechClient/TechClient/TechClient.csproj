@@ -108,6 +108,7 @@
     <Compile Include="Config_EmissorEletronico.cs" />
     <Compile Include="Config_Especiais.cs" />
     <Compile Include="Consumo.cs" />
+    <Compile Include="Consumo_Itens.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
