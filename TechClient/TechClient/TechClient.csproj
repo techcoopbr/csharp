@@ -64,6 +64,7 @@
     <Compile Include="Apto_Reserva_Itens.cs" />
     <Compile Include="Apto_Reserva_Operacoes.cs" />
     <Compile Include="Apto_Reserva_Tarifas.cs" />
+    <Compile Include="Banco.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
