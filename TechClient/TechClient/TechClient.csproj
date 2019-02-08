@@ -140,6 +140,7 @@
     <Compile Include="Ecf_TotalAliquota.cs" />
     <Compile Include="Ecf_TotalForma.cs" />
     <Compile Include="Ecf_TotalNaoFiscal.cs" />
+    <Compile Include="Email.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
