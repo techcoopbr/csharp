@@ -153,6 +153,7 @@
     <Compile Include="Es_NaturezaRubrica.cs" />
     <Compile Include="Es_TipoEmpresa.cs" />
     <Compile Include="Etiquetas.cs" />
+    <Compile Include="Etiquetas_Itens.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
