@@ -182,6 +182,7 @@
     <Compile Include="Mdfe_Contratante.cs" />
     <Compile Include="Mdfe_Descarregamento.cs" />
     <Compile Include="Mdfe_Lacres.cs" />
+    <Compile Include="Mdfe_M1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
