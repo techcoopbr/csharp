@@ -143,6 +143,7 @@
     <Compile Include="Email.cs" />
     <Compile Include="Email_Anexos.cs" />
     <Compile Include="Email_Contatos.cs" />
+    <Compile Include="Empresa.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
