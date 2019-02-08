@@ -133,6 +133,7 @@
     <Compile Include="Departamento.cs" />
     <Compile Include="Desenvolvedora.cs" />
     <Compile Include="Devolucao.cs" />
+    <Compile Include="Duplicatas.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
