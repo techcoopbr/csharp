@@ -89,6 +89,7 @@
     <Compile Include="ComandaAbertura.cs" />
     <Compile Include="Comandas.cs" />
     <Compile Include="ComandasImpressao.cs" />
+    <Compile Include="ComandasItens.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
