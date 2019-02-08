@@ -95,6 +95,7 @@
     <Compile Include="ComandasOperacoes.cs" />
     <Compile Include="Comb_Bicos.cs" />
     <Compile Include="Comb_Bomba.cs" />
+    <Compile Include="Comb_Config.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
