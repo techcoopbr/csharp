@@ -211,6 +211,7 @@
     <Compile Include="Nf_Operacoes.cs" />
     <Compile Include="Nf_Operacoes_Dav.cs" />
     <Compile Include="Nf_Outros.cs" />
+    <Compile Include="Nf_Produtos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
