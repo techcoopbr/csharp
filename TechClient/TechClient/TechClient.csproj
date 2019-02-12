@@ -192,6 +192,7 @@
     <Compile Include="Motores.cs" />
     <Compile Include="Movimento.cs" />
     <Compile Include="MovimentoGerencial.cs" />
+    <Compile Include="Ncm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
