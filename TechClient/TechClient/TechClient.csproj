@@ -203,6 +203,7 @@
     <Compile Include="Nf_Comissao.cs" />
     <Compile Include="Nf_Devolucoes.cs" />
     <Compile Include="Nf_Energia.cs" />
+    <Compile Include="Nf_Entrega.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
