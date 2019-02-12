@@ -214,6 +214,7 @@
     <Compile Include="Nf_Produtos.cs" />
     <Compile Include="Nf_ProdutosLog.cs" />
     <Compile Include="Nf_Produto_Controle.cs" />
+    <Compile Include="Nf_Retirada.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
