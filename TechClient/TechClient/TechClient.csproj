@@ -222,6 +222,7 @@
     <Compile Include="Operacoes_Planog.cs" />
     <Compile Include="Operacoes_Tipo.cs" />
     <Compile Include="OperadorCaixa.cs" />
+    <Compile Include="Paf_Dav.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
