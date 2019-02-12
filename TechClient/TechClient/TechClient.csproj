@@ -219,6 +219,7 @@
     <Compile Include="Nsu.cs" />
     <Compile Include="Operacoes.cs" />
     <Compile Include="Operacoes_Multi.cs" />
+    <Compile Include="Operacoes_Planog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
