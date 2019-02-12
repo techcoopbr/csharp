@@ -189,6 +189,7 @@
     <Compile Include="Mdfe_Seguro.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="MotivoItens.cs" />
+    <Compile Include="Motores.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
