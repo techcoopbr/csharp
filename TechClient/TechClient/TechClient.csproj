@@ -232,6 +232,7 @@
     <Compile Include="PessoaHorarios.cs" />
     <Compile Include="PessoaMeta.cs" />
     <Compile Include="PessoaPlanoVenda.cs" />
+    <Compile Include="Pessoas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
