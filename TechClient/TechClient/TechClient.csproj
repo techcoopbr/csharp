@@ -229,6 +229,7 @@
     <Compile Include="PcFluxo03.cs" />
     <Compile Include="PcFluxo04.cs" />
     <Compile Include="PessoaDesconto.cs" />
+    <Compile Include="PessoaHorarios.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
