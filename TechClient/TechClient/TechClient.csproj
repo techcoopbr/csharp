@@ -225,6 +225,9 @@
     <Compile Include="Paf_Dav.cs" />
     <Compile Include="Paf_Dav_Log.cs" />
     <Compile Include="PcFluxo01.cs" />
+    <Compile Include="PcFluxo02.cs" />
+    <Compile Include="PcFluxo03.cs" />
+    <Compile Include="PcFluxo04.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
