@@ -217,6 +217,7 @@
     <Compile Include="Nf_Retirada.cs" />
     <Compile Include="Nf_Servicos.cs" />
     <Compile Include="Nsu.cs" />
+    <Compile Include="Operacoes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
