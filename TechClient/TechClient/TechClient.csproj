@@ -196,6 +196,7 @@
     <Compile Include="Ncm_Impostos.cs" />
     <Compile Include="Nf.cs" />
     <Compile Include="Nfe_Cce.cs" />
+    <Compile Include="Nfe_Instrucao.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
