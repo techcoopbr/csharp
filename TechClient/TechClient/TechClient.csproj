@@ -264,6 +264,7 @@
     <Compile Include="Setor.cs" />
     <Compile Include="Sistema.cs" />
     <Compile Include="Sped_Generos.cs" />
+    <Compile Include="Sub-Grupo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
