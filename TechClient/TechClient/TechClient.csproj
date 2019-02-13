@@ -241,6 +241,7 @@
     <Compile Include="Precos.cs" />
     <Compile Include="Precos_Itens.cs" />
     <Compile Include="Producao.cs" />
+    <Compile Include="Producao_Final.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
