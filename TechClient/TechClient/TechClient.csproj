@@ -245,6 +245,7 @@
     <Compile Include="Producao_Itens.cs" />
     <Compile Include="Produtos.cs" />
     <Compile Include="Produtos_Pessoas.cs" />
+    <Compile Include="Produto_Caracteristica.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
