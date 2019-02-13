@@ -236,6 +236,7 @@
     <Compile Include="Piloteiros.cs" />
     <Compile Include="PlanoContaC.cs" />
     <Compile Include="PlanoContaCrfb.cs" />
+    <Compile Include="PlanoContaG.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
