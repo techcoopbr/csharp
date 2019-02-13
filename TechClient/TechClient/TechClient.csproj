@@ -257,6 +257,7 @@
     <Compile Include="Recibo.cs" />
     <Compile Include="ReciboItens.cs" />
     <Compile Include="RestricaoVenda.cs" />
+    <Compile Include="Romaneio.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
