@@ -267,6 +267,7 @@
     <Compile Include="Sub-Grupo.cs" />
     <Compile Include="Tab_Cest.cs" />
     <Compile Include="Tarifas.cs" />
+    <Compile Include="TipoCobranca.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
