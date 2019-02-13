@@ -247,6 +247,7 @@
     <Compile Include="Produtos_Pessoas.cs" />
     <Compile Include="Produto_Caracteristica.cs" />
     <Compile Include="Produto_Controle.cs" />
+    <Compile Include="Produto_Estoque.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
