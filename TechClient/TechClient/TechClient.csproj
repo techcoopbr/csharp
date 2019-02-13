@@ -250,6 +250,7 @@
     <Compile Include="Produto_Estoque.cs" />
     <Compile Include="Produto_Formula.cs" />
     <Compile Include="Produto_Grade.cs" />
+    <Compile Include="Produto_Pacote.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
