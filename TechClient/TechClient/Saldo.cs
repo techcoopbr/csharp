@@ -14,6 +14,6 @@ namespace TechClient
         public int Idfuncionario { get; set; }
         public int Idempresa { get; set; }
         public float Valor { get; set; }
-        public float Saldo { get; set; }
+        public float saldo { get; set; }
     }
 }
