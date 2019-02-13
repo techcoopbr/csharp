@@ -274,6 +274,7 @@
     <Compile Include="Tributacao_Relacao.cs" />
     <Compile Include="Unidades.cs" />
     <Compile Include="Usuarios.cs" />
+    <Compile Include="Usuarios_Atalhos.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
