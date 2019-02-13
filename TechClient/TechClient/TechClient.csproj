@@ -277,6 +277,7 @@
     <Compile Include="Usuarios_Atalhos.cs" />
     <Compile Include="Usuarios_Cadastro.cs" />
     <Compile Include="Usuarios_Especiais.cs" />
+    <Compile Include="Usuarios_Tabela.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
