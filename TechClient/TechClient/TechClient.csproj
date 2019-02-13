@@ -261,6 +261,7 @@
     <Compile Include="Romaneio_Itens.cs" />
     <Compile Include="Saldo.cs" />
     <Compile Include="Servico.cs" />
+    <Compile Include="Setor.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
